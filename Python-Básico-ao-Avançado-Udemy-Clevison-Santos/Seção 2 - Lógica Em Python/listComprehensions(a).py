@@ -3,4 +3,4 @@ b = [1, 2, 3, 4, 5]
 
 combinacoes = [(x, y) for x in a for y in b if x + y == 5]
 
-print(combinacoes)
+print(combinacoes) # Saída: [(1, 4), (2, 3), (3, 2), (4, 1)]
