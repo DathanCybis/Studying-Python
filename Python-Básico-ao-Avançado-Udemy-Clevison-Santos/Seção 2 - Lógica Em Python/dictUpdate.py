@@ -1,10 +1,10 @@
 livros = {
-    "titílo": "livro",
+    "título": "livro",
     "autor": "alguém",
     "lancamento": "algum dia"
 }
 
-print(livros) # {'titílo': 'livro', 'autor': 'alguém', 'lancamento': 'algum dia'}
+print(livros) # {'título': 'livro', 'autor': 'alguém', 'lancamento': 'algum dia'}
 
 participantes = {
     "fulano": "sem nome",
@@ -13,4 +13,4 @@ participantes = {
 
 livros.update(participantes)
 
-print(livros) # {'titílo': 'livro', 'autor': 'alguém', 'lancamento': 'algum dia', 'fulano': 'sem nome', 'beltrano': 'nome algum'}
+print(livros) # {'título': 'livro', 'autor': 'alguém', 'lancamento': 'algum dia', 'fulano': 'sem nome', 'beltrano': 'nome algum'}
