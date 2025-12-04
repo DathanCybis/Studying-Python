@@ -33,6 +33,8 @@ def adicionar_contato():
 
     agenda[nome] = numero
 
+    print("\nContato adicionado com sucesso!")
+
 
 def editar_contato():
     listar_contato()
@@ -51,6 +53,9 @@ def remover_contato():
     nome = str(input("Digite o nome do contato a ser excluído: "))
 
     agenda.pop(nome)
+
+    print("\nContato removido com sucesso!")
+
 
 def listar_contato():
     print("\n")
