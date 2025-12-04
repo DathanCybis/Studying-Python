@@ -52,7 +52,7 @@ def remover_contato():
 
 def listar_contato():
     print("\n")
-    for chave, valor in agenda:
+    for chave, valor in agenda.items():
         print(f"Nome: {chave}")
         print(f"Telefone: {valor}\n")
 
