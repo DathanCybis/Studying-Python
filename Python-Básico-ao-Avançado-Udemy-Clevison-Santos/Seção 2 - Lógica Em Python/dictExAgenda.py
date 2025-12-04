@@ -43,22 +43,25 @@ def adicionar_contato():
 def editar_contato():
     listar_contato()
     nome = input("Digite o nome a ser mudado: ")
-    nome_novo = input("Digite o novo nome (Deixa em branco para manter): ")
-    numero = input("Digite o número (Deixe em branco para manter): ")
+    if nome in agenda:
+        nome_novo = input("Digite o novo nome (Deixa em branco para manter): ")
+        numero = input("Digite o número (Deixe em branco para manter): ")
 
-    if nome_novo:
-        if nome_novo in agenda:
-            print("\nErro ao editar! O nome digitado já está em uso!")
-            return
-        
-        agenda[nome_novo] = agenda.pop(nome)
+        if nome_novo:
+            if nome_novo in agenda:
+                print("\nErro ao editar! O nome digitado já está em uso!")
+                return
+            
+            agenda[nome_novo] = agenda.pop(nome)
+        else:
+            nome_novo = nome
+
+        if numero:
+            agenda[nome_novo] = numero
+
+        print("\nContato atualizado com sucesso!")
     else:
-        nome_novo = nome
-
-    if numero:
-        agenda[nome_novo] = numero
-
-    print("\nContato atualizado com sucesso!")
+        print("\nContato não existente!")
 
 
 def remover_contato():
