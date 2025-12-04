@@ -31,6 +31,10 @@ def adicionar_contato():
     nome = str(input("Digite o nome: "))
     numero = int(input("Digite o número: "))
 
+    if nome in agenda:
+        print("\nErro ao adicionar! Contato já existente!")
+        return
+
     agenda[nome] = numero
 
     print("\nContato adicionado com sucesso!")
@@ -38,12 +42,21 @@ def adicionar_contato():
 
 def editar_contato():
     listar_contato()
-    nome = str(input("Digite o nome a ser mudado: "))
-    nome_novo = str(input("Digite o novo nome: "))
-    numero = int(input("Digite o número: "))
+    nome = input("Digite o nome a ser mudado: ")
+    nome_novo = input("Digite o novo nome (Deixa em branco para manter): ")
+    numero = input("Digite o número (Deixe em branco para manter): ")
 
-    agenda[nome_novo] = agenda.pop(nome)
-    agenda[nome_novo] = numero
+    if nome_novo:
+        if nome_novo in agenda:
+            print("\nErro ao editar! O nome digitado já está em uso!")
+            return
+        
+        agenda[nome_novo] = agenda.pop(nome)
+    else:
+        nome_novo = nome
+
+    if numero:
+        agenda[nome_novo] = numero
 
     print("\nContato atualizado com sucesso!")
 
@@ -59,6 +72,10 @@ def remover_contato():
 
 def listar_contato():
     print("\n")
+
+    if not agenda:
+        print("Nenhum contato registrado!")
+
     for chave, valor in agenda.items():
         print(f"Nome: {chave}")
         print(f"Telefone: {valor}\n")
