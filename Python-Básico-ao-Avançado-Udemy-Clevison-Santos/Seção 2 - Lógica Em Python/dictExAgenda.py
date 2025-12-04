@@ -17,10 +17,11 @@ def selecionar_menu():
         elif opc == 2:
             editar_contato()
         elif opc == 3:
-            pass
+            remover_contato()
         elif opc == 4:
             listar_contato()
         elif opc == 5:
+            print("\nSaindo...\n")
             break
         else:
             print("Digite uma opção válida.")
@@ -42,8 +43,18 @@ def editar_contato():
     agenda[nome_novo] = agenda.pop(nome)
     agenda[nome_novo] = numero
 
+
+def remover_contato():
+    listar_contato()
+    nome = str(input("Digite o nome do contato a ser excluído: "))
+
+    agenda.pop(nome)
+
 def listar_contato():
-    print(agenda)
+    print("\n")
+    for chave, valor in agenda:
+        print(f"Nome: {chave}")
+        print(f"Telefone: {valor}\n")
 
 
 agenda = {}
