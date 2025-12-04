@@ -68,10 +68,11 @@ def remover_contato():
     listar_contato()
     nome = str(input("Digite o nome do contato a ser excluído: "))
 
-    agenda.pop(nome)
-
-    print("\nContato removido com sucesso!")
-
+    if nome in agenda:
+        agenda.pop(nome) #or del agenda[nome]
+        print("\nContato removido com sucesso!")
+    else:
+        print("\nContato não existente!")
 
 def listar_contato():
     print("\n")
