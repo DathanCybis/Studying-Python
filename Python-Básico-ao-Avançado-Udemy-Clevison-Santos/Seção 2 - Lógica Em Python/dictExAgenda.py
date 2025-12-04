@@ -57,7 +57,10 @@ def listar_contato():
         print(f"Telefone: {valor}\n")
 
 
-agenda = {}
+def main():
+    global agenda
+    agenda = {}
+    selecionar_menu()
 
 
-selecionar_menu()
+main()
