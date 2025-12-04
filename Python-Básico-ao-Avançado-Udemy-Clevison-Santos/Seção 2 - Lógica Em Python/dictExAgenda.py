@@ -43,6 +43,8 @@ def editar_contato():
     agenda[nome_novo] = agenda.pop(nome)
     agenda[nome_novo] = numero
 
+    print("\nContato atualizado com sucesso!")
+
 
 def remover_contato():
     listar_contato()
