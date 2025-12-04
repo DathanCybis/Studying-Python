@@ -15,7 +15,7 @@ def selecionar_menu():
         if opc == 1:
             adicionar_contato()
         elif opc == 2:
-            pass
+            editar_contato()
         elif opc == 3:
             pass
         elif opc == 4:
@@ -32,6 +32,15 @@ def adicionar_contato():
 
     agenda[nome] = numero
 
+
+def editar_contato():
+    listar_contato()
+    nome = str(input("Digite o nome a ser mudado: "))
+    nome_novo = str(input("Digite o novo nome: "))
+    numero = int(input("Digite o número: "))
+
+    agenda[nome_novo] = agenda.pop(nome)
+    agenda[nome_novo] = numero
 
 def listar_contato():
     print(agenda)
