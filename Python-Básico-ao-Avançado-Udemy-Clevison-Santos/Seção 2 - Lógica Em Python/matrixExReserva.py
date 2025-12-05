@@ -5,10 +5,23 @@ matrix = [
     ["D", "D"]*5
 ]
 
-for linha in matrix:
+def mostrar_matrix():
+    for linha in matrix:
 
-    for coluna in linha:
+        for coluna in linha:
 
-        print(coluna, end=" ")
+            print(coluna, end=" ")
 
-    print()
+        print()
+
+
+def mostrar_menu():
+    print("\nMenu:")
+    print("1. Ver disposição dos assentos")
+    print("2. Reservar um assento")
+    print("3. Sair")
+
+
+def main():
+    while True:
+        mostrar_menu()
