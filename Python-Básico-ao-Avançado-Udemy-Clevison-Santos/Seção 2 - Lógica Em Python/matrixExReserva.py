@@ -23,8 +23,12 @@ def mostrar_menu():
 
 
 def reservar_assento():
-    fileira = int(input("Digite o número da fileira / Linha (1-4): "))-1
+    fileira = int(input("\nDigite o número da fileira / Linha (1-4): "))-1
+    assento = int(input("Digite o número do assento / Coluna (1-10): "))-1
     
+    matrix[fileira][assento] = "R"
+
+    print("\nAssento reservado com sucesso!")
 
 
 def main():
