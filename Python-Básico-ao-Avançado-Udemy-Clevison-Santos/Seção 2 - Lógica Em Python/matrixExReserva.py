@@ -27,7 +27,7 @@ def reservar_assento():
     assento = int(input("Digite o número do assento / Coluna (1-10): "))-1
     
     if matrix[fileira][assento] == "R":
-        print("\nAssento ocupado!")
+        print("\nAssento já reservado ou ocupado!")
     else:
         matrix[fileira][assento] = "R"
         print("\nAssento reservado com sucesso!")
