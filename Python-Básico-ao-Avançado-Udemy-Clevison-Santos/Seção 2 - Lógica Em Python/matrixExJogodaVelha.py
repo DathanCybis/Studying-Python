@@ -21,6 +21,10 @@ def main():
         cont+=1
 
         if cont % 2 != 0:
-            pass
+            escolha = int(input("Jogador 'O', escolha a linha e coluna (ex: 1 3): "))
+        else:
+            escolha = int(input("Jogador 'X', escolha a linha e coluna (ex: 1 3): "))
+        
+        
 
 main()
