@@ -17,16 +17,23 @@ def mostrar_jogo():
 
 def analisar():
     for linha in matrix:
+        x = 0
+        o = 0
         for coluna in linha:
             if coluna == "X":
+                x += 1
+            elif coluna == "O":
+                o += 1
+            if x == 3 or o == 3:
+                print(f"Fim do jogo!")
                 
         print()
 
 
 def main():
-    analisar()
     cont = 0
     while True:
+        analisar()
         mostrar_jogo()
         cont+=1
 
