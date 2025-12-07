@@ -15,40 +15,52 @@ def mostrar_jogo():
     print()
 
 
-def analisar():
-    for linha in matrix:
-        x = 0
-        o = 0
-        for coluna in linha:
-            if coluna == "X":
-                x += 1
-            elif coluna == "O":
-                o += 1
-            if x == 3 or o == 3:
-                print(f"Fim do jogo!")
-                
-        print()
+def analisar(jogador):
+    for i in range(3):
+        todas_linhas = True
+        todas_colunas = True
+
+        for j in range(3):
+            if matrix[i][j] != jogador:
+                todas_linhas = False
+
+            if matrix[j][i] != jogador:
+                todas_colunas = False
+
+    if todas_linhas or todas_colunas:
+        return True
+    
+    if matrix[0][0] == jogador and matrix[1][1] == jogador and matrix[2][2] == jogador:
+        return True
+    
+    if matrix[0][2] == jogador and matrix[1][1] == jogador and matrix[2][0] == jogador:
+        return True
+     
+    return False     
 
 
 def main():
     cont = 0
     while True:
-        analisar()
         mostrar_jogo()
         cont+=1
 
         if cont % 2 != 0:
             escolha = input("Jogador 'O', escolha a linha e coluna (ex: 0 2): ")
-            jogada = "O"
+            jogador = "O"
         else:
             escolha = input("Jogador 'X', escolha a linha e coluna (ex: 0 2): ")
-            jogada = "X"
+            jogador = "X"
 
         linha = int(escolha[0])
         coluna = int(escolha[2])
-        matrix[linha][coluna] = jogada
-        
+        matrix[linha][coluna] = jogador
+
+        if analisar(jogador):
+            print(f"Jogador {jogador} venceu!")
+            break
+
         print()
-        
+
 
 main()
