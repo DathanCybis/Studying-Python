@@ -15,10 +15,6 @@ def mostrar_jogo():
     print()
 
 
-def aplicar_escolha(escolha):
-    matrix[escolha[0]][escolha[2]] = ""
-
-
 def main():
     cont = 0
     while True:
@@ -26,15 +22,16 @@ def main():
         cont+=1
 
         if cont % 2 != 0:
-            escolha = input("Jogador 'O', escolha a linha e coluna (ex: 1 3): ")
-            matrix[escolha[0]][escolha[2]] = "O"
+            escolha = input("Jogador 'O', escolha a linha e coluna (ex: 0 2): ")
+            jogada = "O"
         else:
-            escolha = input("Jogador 'X', escolha a linha e coluna (ex: 1 3): ")
-            matrix[escolha[0]][escolha[2]] = "X"
-        
-        aplicar_escolha(escolha)
+            escolha = input("Jogador 'X', escolha a linha e coluna (ex: 0 2): ")
+            jogada = "X"
 
-        print(escolha)
+        linha = int(escolha[0])
+        coluna = int(escolha[2])
+        matrix[linha][coluna] = jogada
+        
         print()
         
 
