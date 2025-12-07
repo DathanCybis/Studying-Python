@@ -15,7 +15,16 @@ def mostrar_jogo():
     print()
 
 
+def analisar():
+    for linha in matrix:
+        for coluna in linha:
+            if coluna == "X":
+                
+        print()
+
+
 def main():
+    analisar()
     cont = 0
     while True:
         mostrar_jogo()
