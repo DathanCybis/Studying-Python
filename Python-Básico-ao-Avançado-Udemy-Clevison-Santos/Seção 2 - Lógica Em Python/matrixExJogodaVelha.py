@@ -1,7 +1,7 @@
 matrix = [
-    ["°", "°", "X"],
-    ["°", "X", "°"],
-    ["X", "°", "°"]
+    ["°", "°", "°"],
+    ["°", "°", "°"],
+    ["°", "°", "°"]
 ]
 
 def mostrar_jogo():
@@ -34,11 +34,9 @@ def verificar_ganhador(jogador):
     return False
 
 
-
 def main():
     cont = 0
     while True:
-        cont+=1
         mostrar_jogo()
 
         if cont % 2 != 0:
@@ -50,7 +48,12 @@ def main():
 
         linha = int(escolha[0])
         coluna = int(escolha[2])
-        matrix[linha][coluna] = jogador
+        if matrix[linha][coluna] == "°":
+            matrix[linha][coluna] = jogador
+            cont+=1
+        else:
+            print("Posição já ocupada, tente novamente!")
+
         if verificar_ganhador(jogador):
             mostrar_jogo()
             print(f"Fim do jogo! O jogador '{jogador}' venceu!")
