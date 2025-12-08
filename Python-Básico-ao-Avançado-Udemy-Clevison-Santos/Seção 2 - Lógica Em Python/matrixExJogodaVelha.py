@@ -1,5 +1,5 @@
 matrix = [
-    ["O", "O", "O"],
+    ["°", "°", "°"],
     ["°", "°", "°"],
     ["°", "°", "°"]
 ]
@@ -26,8 +26,7 @@ def verificar_ganhador(jogador):
         for coluna in linha:
             if coluna == jogador:
                 total_linha+=1
-
-
+    
 
 
 def main():
@@ -46,8 +45,9 @@ def main():
         linha = int(escolha[0])
         coluna = int(escolha[2])
         matrix[linha][coluna] = jogador
-        verificar_ganhador(jogador)
-
+        if verificar_ganhador(jogador):
+            print(f"Fim do jogo! O jogador '{jogador}' venceu!")
+            break
         print()
 
 
