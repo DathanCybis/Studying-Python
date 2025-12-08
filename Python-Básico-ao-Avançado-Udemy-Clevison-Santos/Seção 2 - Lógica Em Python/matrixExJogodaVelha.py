@@ -1,5 +1,5 @@
 matrix = [
-    ["°", "°", "°"],
+    ["O", "O", "O"],
     ["°", "°", "°"],
     ["°", "°", "°"]
 ]
@@ -14,6 +14,21 @@ def mostrar_jogo():
         print(" ---" * 3)
     print()
  
+
+def verificar_ganhador(jogador):
+    total_linha = 0
+    total_coluna = 0
+    for linha in matrix:
+        if total_linha == 3 or total_coluna == 3:
+            return True
+        total_linha = 0
+        total_coluna = 0
+        for coluna in linha:
+            if coluna == jogador:
+                total_linha+=1
+
+
+
 
 def main():
     cont = 0
@@ -31,6 +46,7 @@ def main():
         linha = int(escolha[0])
         coluna = int(escolha[2])
         matrix[linha][coluna] = jogador
+        verificar_ganhador(jogador)
 
         print()
 
