@@ -1,7 +1,7 @@
 matrix = [
-    ["°", "°", "°"],
-    ["°", "O", "°"],
-    ["°", "O", "°"]
+    ["°", "°", "X"],
+    ["°", "X", "°"],
+    ["X", "°", "°"]
 ]
 
 def mostrar_jogo():
@@ -16,15 +16,6 @@ def mostrar_jogo():
  
 
 def verificar_ganhador(jogador):
-    total_linha = 0
-    for linha in matrix:
-        if total_linha == 3:
-            return True
-        total_linha = 0
-        for coluna in linha:
-            if coluna == jogador:
-                total_linha+=1
-
     for linha in range(3):
         total_coluna = True
         total_linha = True
@@ -35,8 +26,13 @@ def verificar_ganhador(jogador):
                 total_linha = False
         if total_coluna or total_linha:
             return True
-
+    if matrix[0][0] == jogador and matrix[1][1] == jogador and matrix[2][2] == jogador:
+        return True
+    if matrix[0][2] == jogador and matrix[1][1] == jogador and matrix[2][0] == jogador:
+        return True
+    
     return False
+
 
 
 def main():
