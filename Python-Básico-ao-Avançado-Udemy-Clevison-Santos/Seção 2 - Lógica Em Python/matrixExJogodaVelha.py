@@ -36,7 +36,7 @@ def verificar_ganhador(jogador):
 
 def main():
     cont = 0
-    while True:
+    for _ in range(9):
         mostrar_jogo()
 
         if cont % 2 != 0:
@@ -59,6 +59,9 @@ def main():
             print(f"Fim do jogo! O jogador '{jogador}' venceu!")
             break
         print()
+    else:
+        mostrar_jogo()
+        print("Fim do jogo! Empate, deu velha!!")
 
 
 main()
