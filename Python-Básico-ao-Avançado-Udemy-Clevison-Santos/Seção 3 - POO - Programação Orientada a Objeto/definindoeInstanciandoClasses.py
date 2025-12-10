@@ -17,4 +17,14 @@ class Carro:
         print(f"Freiando... Velocidade atual: {self.velocidade} km/h")
 
 
-    
+    def exibir_info(self):
+        print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}")
+
+
+carro1 = Carro("Toyota", "Corolla", "Preto")
+
+carro1.exibir_info() # Marca: Toyota, Modelo: Corolla, Cor: Preto
+carro1.acelerar()
+carro1.acelerar()
+carro1.acelerar()
+carro1.acelerar()
