@@ -25,8 +25,6 @@ class Carro:
         print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}, Velocidade: {self.velocidade} km/h")
 
 
-lista_carros = []
-
 def adicionar_carro():
     marca = input("Marca do carro: ")
     modelo = input("Modelo do carro: ")
@@ -36,7 +34,7 @@ def adicionar_carro():
 
 
 def main():
-    lista = []
+    lista_carros = []
 
     while True:
         print("\n --- MENU --- ")
