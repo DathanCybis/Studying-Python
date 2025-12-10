@@ -9,7 +9,7 @@ class Carro:
 
     def acelerar(self):
         self.velocidade += 10
-        print(f"Acelerando... Velocidade atual: {self.velocidade} km/h")
+        print(f"Acelerando... Velocidade atual: {self.velocidade} km/h\n")
 
     
     def frear(self):
@@ -18,15 +18,19 @@ class Carro:
         if self.velocidade < 0:
             self.velocidade = 0
 
-        print(f"Freando... Velocidade atual: {self.velocidade} km/h")
+        print(f"Freando... Velocidade atual: {self.velocidade} km/h\n")
 
 
     def exibir_info(self):
-        print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}")
+        print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}\n")
 
 
 def adicionar_carro():
-    pass
+    marca = input("Marca do carro: ")
+    modelo = input("Modelo do carro: ")
+    cor = input("Cor do carro: ")
+
+    return Carro(marca, modelo, cor)
 
 
 def main():
@@ -43,15 +47,17 @@ def main():
         opc = input("\nDigite a opção desejada: ")
 
         if opc == "1":
-            adicionar_carro()
+            carro = adicionar_carro()
+            print("\nCarro adicionado com sucesso!\n")
         elif opc == "2":
-            Carro.exibir_info()
+            carro.exibir_info()
         elif opc == "3":
-            pass
+            carro.acelerar()
         elif opc == "4":
-            pass
+            carro.frear()
         elif opc == "5":
-            pass
+            print("\nFinalizando o sistema...")
+            break
         else:
             print("Digite uma opção válida!\n")
 
