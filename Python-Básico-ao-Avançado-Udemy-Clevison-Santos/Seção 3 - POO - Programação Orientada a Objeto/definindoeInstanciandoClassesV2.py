@@ -9,7 +9,7 @@ class Carro:
 
     def acelerar(self):
         self.velocidade += 10
-        print(f"Acelerando... Velocidade atual: {self.velocidade} km/h\n")
+        print(f"Acelerando {self.modelo}... Velocidade atual: {self.velocidade} km/h\n")
 
     
     def frear(self):
@@ -22,8 +22,10 @@ class Carro:
 
 
     def exibir_info(self):
-        print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}\n")
+        print(f"Marca: {self.marca}, Modelo: {self.modelo}, Cor: {self.cor}")
 
+
+lista_carros = []
 
 def adicionar_carro():
     marca = input("Marca do carro: ")
@@ -47,17 +49,41 @@ def main():
         opc = input("\nDigite a opção desejada: ")
 
         if opc == "1":
-            carro = adicionar_carro()
+            novo_carro = adicionar_carro()
+            lista_carros.append(novo_carro)
             print("\nCarro adicionado com sucesso!\n")
+
         elif opc == "2":
-            carro.exibir_info()
+            if lista_carros:
+                for carro in lista_carros:
+                    carro.exibir_info()
+            else:
+                print("\nNenhum carro foi adicionado ainda.\n")
+
         elif opc == "3":
-            carro.acelerar()
+            modelo = input("\nDigite o modelo do carro que quer acelerar: ")
+
+            for carro in lista_carros:
+                if carro.modelo == modelo:
+                    carro.acelerar()
+                    break
+            else:
+                print("Modelo não encontrado.\n")
+
         elif opc == "4":
-            carro.frear()
+            modelo = input("\nDigite o modelo do carro que quer frear: ")
+
+            for carro in lista_carros:
+                if carro.modelo == modelo:
+                    carro.frear()
+                    break
+            else:
+                print("Modelo não encontrado.\n")
+
         elif opc == "5":
-            print("\nFinalizando o sistema...")
+            print("\nFinalizando o sistema...\n")
             break
+
         else:
             print("Digite uma opção válida!\n")
 
