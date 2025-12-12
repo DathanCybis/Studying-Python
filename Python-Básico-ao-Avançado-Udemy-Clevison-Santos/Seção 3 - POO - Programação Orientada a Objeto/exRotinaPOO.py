@@ -24,7 +24,7 @@ class Pessoa:
             else:
                 if self.dirigindo:
                     print(f"{self.nome} não pode comer dirigindo.")
-                if not self.acordado:
+                elif not self.acordado:
                     print(f"{self.nome} não pode comer dormindo.")
     
 
@@ -46,7 +46,7 @@ class Pessoa:
             else:
                 if self.comendo:
                     print(f"{self.nome} não pode dirigir comendo.")
-                if not self.acordado:
+                elif not self.acordado:
                     print(f"{self.nome} não pode dirigir dormindo.")
 
             
@@ -68,7 +68,7 @@ class Pessoa:
             else:
                 if self.dirigindo:
                     print(f"{self.nome} não pode dormir enquanto dirige.")
-                if self.comendo:
+                elif self.comendo:
                     print(f"{self.nome} não pode dormir enquanto come.")
 
 
@@ -93,10 +93,10 @@ joao.dirigir() # João não pode dirigir comendo.
 
 joao.parar_de_comer() # João parou de comer.
 
-joao.dormir()
+joao.dormir() # João começou a dormir.
 
-joao.comer()
+joao.comer() # João não pode comer dormindo.
 
-joao.dormir()
+joao.dormir() # João já está dormindo.
 
-joao.dirigir()
+joao.dirigir() # João não pode dirigir dormindo.
