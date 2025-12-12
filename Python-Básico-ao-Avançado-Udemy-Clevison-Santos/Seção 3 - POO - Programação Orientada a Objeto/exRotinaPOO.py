@@ -22,11 +22,15 @@ class Pessoa:
                 self.comendo = True
                 print(f"{self.nome} começou a comer.")
             else:
-                print(f"{self.nome} não pode comer dirigindo ou dormindo.")
+                if self.dirigindo:
+                    print(f"{self.nome} não pode comer dirigindo.")
+                if not self.acordado:
+                    print(f"{self.nome} não pode dormir dirigindo.")
     
 
     def parar_de_comer(self):
         if self.comendo:
+            self.comendo = False
             print(f"{self.nome} parou de comer.")
         else:
             print(f"{self.nome} não está comendo.")
@@ -40,7 +44,10 @@ class Pessoa:
                 self.dirigindo = True
                 print(f"{self.nome} começou a dirigir.")
             else:
-                print(f"{self.nome} não pode dirigir comendo ou dormindo.")
+                if self.comendo:
+                    print(f"{self.nome} não pode dirigir comendo.")
+                if not self.acordado:
+                    print(f"{self.nome} não pode dirigir dormindo.")
 
             
     def parar_de_dirigir(self):
@@ -52,10 +59,45 @@ class Pessoa:
 
     
     def dormir(self):
-        if self.acordado and not self.dirigindo and not self.comendo:
-            self.acordado = False
-            print(f"{self.nome} começou a dormir.")
-        else:
+        if not self.acordado:
             print(f"{self.nome} já está dormindo.")
+        else:
+            if self.acordado and not self.dirigindo and not self.comendo:
+                self.acordado = False
+                print(f"{self.nome} começou a dormir.")
+            else:
+                if self.dirigindo:
+                    print(f"{self.nome} não pode dormir enquanto dirige")
+                if self.comendo:
+                    print(f"{self.nome} não pode dormir enquanto come")
 
 
+joao = Pessoa("João")
+
+joao.acordar()
+joao.acordar()
+
+joao.comer()
+
+joao.parar_de_comer()
+joao.parar_de_comer()
+
+joao.dirigir()
+
+joao.parar_de_dirigir()
+
+joao.comer()
+
+joao.dormir() ##
+
+joao.dirigir()
+
+joao.parar_de_comer()
+
+joao.dormir()
+
+joao.comer()
+
+joao.dormir()
+
+joao.dirigir()
