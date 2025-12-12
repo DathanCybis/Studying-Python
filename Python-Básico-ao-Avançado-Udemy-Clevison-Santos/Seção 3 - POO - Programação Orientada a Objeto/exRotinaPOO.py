@@ -22,3 +22,10 @@ class Pessoa:
                 self.comendo = True
                 print(f"{self.nome} começou a comer.")
     
+
+    def parar_de_comer(self):
+        if self.comendo:
+            print(f"{self.nome} parou de comer.")
+        else:
+            print(f"{self.nome} não está comendo.")
+
