@@ -25,7 +25,7 @@ class Pessoa:
                 if self.dirigindo:
                     print(f"{self.nome} não pode comer dirigindo.")
                 if not self.acordado:
-                    print(f"{self.nome} não pode dormir dirigindo.")
+                    print(f"{self.nome} não pode comer dormindo.")
     
 
     def parar_de_comer(self):
@@ -67,32 +67,31 @@ class Pessoa:
                 print(f"{self.nome} começou a dormir.")
             else:
                 if self.dirigindo:
-                    print(f"{self.nome} não pode dormir enquanto dirige")
+                    print(f"{self.nome} não pode dormir enquanto dirige.")
                 if self.comendo:
-                    print(f"{self.nome} não pode dormir enquanto come")
+                    print(f"{self.nome} não pode dormir enquanto come.")
 
 
 joao = Pessoa("João")
 
-joao.acordar()
-joao.acordar()
+joao.acordar() # João acordou.
+joao.acordar() # João já está acordado(a).
 
-joao.comer()
+joao.comer() # João começou a comer.
 
-joao.parar_de_comer()
-joao.parar_de_comer()
+joao.parar_de_comer() # João parou de comer.
+joao.parar_de_comer() # João não está comendo.
 
-joao.dirigir()
+joao.dirigir() # João começou a dirigir.
+joao.parar_de_dirigir() # João parou de dirigir.
 
-joao.parar_de_dirigir()
+joao.comer() # João começou a comer.
 
-joao.comer()
+joao.dormir() # João não pode dormir enquanto come.
 
-joao.dormir() ##
+joao.dirigir() # João não pode dirigir comendo.
 
-joao.dirigir()
-
-joao.parar_de_comer()
+joao.parar_de_comer() # João parou de comer.
 
 joao.dormir()
 
