@@ -4,11 +4,14 @@ class Fruta:
         self.preco_kg = preco_kg
         self.estoque_kg = estoque_kg
 
+    def exibir(self):
+        print(f"O preço da fruta {self.nome} é de R${self.preco_kg} o kg e tem {self.estoque_kg} kg em estoque")
+
 
 fruta1 = Fruta("Kiwi", 5, 20)
 
-print(f"O preço da fruta {fruta1.nome} é de R${fruta1.preco_kg} o kg e tem {fruta1.estoque_kg} kg em estoque") # O preço da fruta Kiwi é de R$5 o kg e tem 20 kg em estoque
+fruta1.exibir() # O preço da fruta Kiwi é de R$5 o kg e tem 20 kg em estoque
 
 fruta2 = Fruta("Pêssego", 3, 43)
 
-print(f"O preço da fruta {fruta2.nome} é de R${fruta2.preco_kg} o kg e tem {fruta2.estoque_kg} kg em estoque") # O preço da fruta Pêssego é de R$3 o kg e tem 43 kg em estoque
+Fruta.exibir(fruta2) # O preço da fruta Pêssego é de R$3 o kg e tem 43 kg em estoque
