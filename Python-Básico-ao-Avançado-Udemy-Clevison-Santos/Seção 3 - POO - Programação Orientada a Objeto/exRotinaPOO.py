@@ -51,4 +51,11 @@ class Pessoa:
             print(f"{self.nome} não está dirigindo.")
 
     
-    
+    def dormir(self):
+        if self.acordado and not self.dirigindo and not self.comendo:
+            self.acordado = False
+            print(f"{self.nome} começou a dormir.")
+        else:
+            print(f"{self.nome} já está dormindo.")
+
+
