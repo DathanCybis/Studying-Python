@@ -4,19 +4,19 @@ class FormatadorDeFrase:
 
     
     def maiusculas(self):
-        print(f"Frase atual: {self.frase}".upper())
+        print(f"Frase atual: {self.frase.upper()}")
 
 
     def minusculas(self):
-        print(f"Frase atual: {self.frase}".lower())
+        print(f"Frase atual: {self.frase.lower()}")
 
 
     def capitalizadas(self):
-        print(f"Frase atual: {self.frase}".capitalize())
+        print(f"Frase atual: {self.frase.capitalize()}")
 
 
     def titulo(self):
-        print(f"Frase atual: {self.frase}".title())
+        print(f"Frase atual: {self.frase.title()}")
 
 
     def contar_vogais(self):
@@ -63,31 +63,43 @@ def main():
     frases = FormatadorDeFrase(frase)
 
     while True:
-        print("Escolha uma opção para formatar sua frase:")
-        print("1. ")
-        print("2. ")
-        print("3. ")
-        print("4. ")
-        print("5. ")
-        print("6. ")
-        print("7. ")
-        print("8. ")
-        print("9. ")
-        print("10. ")
-        frases.maiusculas()
+        print("\nEscolha uma opção para formatar sua frase:")
+        print("1. Converter para maiúsculas")
+        print("2. Converter para minúsculas")
+        print("3. Capitalizar a primeira letra")
+        print("4. Converter para formato de título")
+        print("5. Contar vogais")
+        print("6. Contar consoantes")
+        print("7. Contar letra 'a'")
+        print("8. Pesquisar palavra")
+        print("9. Mostrar frase atual")
+        print("10. Sair")
 
-        frases.minusculas()
+        opc = input("\nDigite qual opção quer escolher: ")
 
-        frases.capitalizadas()
+        if opc == "1":
+            frases.maiusculas()
+        elif opc == "2":
+            frases.minusculas()
+        elif opc == "3":
+            frases.capitalizadas()
+        elif opc == "4":
+            frases.titulo()
+        elif opc == "5":
+            frases.contar_vogais()
+        elif opc == "6":
+            frases.contar_consoantes()
+        elif opc == "7":
+            frases.contar_a()
+        elif opc == "8":
+            frases.procurar_frase()
+        elif opc == "9":
+            frases.mostrar_frase()
+        elif opc == "10":
+            print("Saindo do programa...")
+            break
+        else:
+            print("Opção inválida, tente novamente.")
 
-        frases.titulo()
-
-        frases.contar_vogais()
-
-        frases.contar_consoantes()
-
-        frases.contar_a()
-
-        frases.mostrar_frase()
-
-        frases.procurar_frase()
+        
+main()
