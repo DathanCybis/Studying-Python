@@ -4,19 +4,19 @@ class FormatadorDeFrase:
 
     
     def maiusculas(self):
-        print(f"Frase atual: {self.frase.upper()}")
+        self.frase = self.frase.upper()
 
 
     def minusculas(self):
-        print(f"Frase atual: {self.frase.lower()}")
+        self.frase = self.frase.lower()
 
 
     def capitalizadas(self):
-        print(f"Frase atual: {self.frase.capitalize()}")
+        self.frase = self.frase.capitalize()
 
 
     def titulo(self):
-        print(f"Frase atual: {self.frase.title()}")
+        self.frase = self.frase.title()
 
 
     def contar_vogais(self):
@@ -27,7 +27,6 @@ class FormatadorDeFrase:
             elif i == "á" or i == "é" or i == "í" or i == "ó" or i == "ú":
                 count += 1
         print(f"A frase contém {count} vogais!")
-        print(f"Frase atual: {self.frase}")
 
 
     def contar_consoantes(self):
@@ -38,23 +37,20 @@ class FormatadorDeFrase:
             elif i == "á" or i == "é" or i == "í" or i == "ó" or i == "ú":
                 count -= 1
         print(f"A frase contém {count} consoantes!")
-        print(f"Frase atual: {self.frase}")
 
 
     def contar_a(self):
         print(f"A frase contém {self.frase.lower().count("a")} letra(s) 'A'")
-        print(f"Frase atual: {self.frase}")
 
 
     def procurar_frase(self):
         procurar = input("Qual frase deseja procurar: ")
 
         print(f"A palavra '{procurar}' aparece {self.frase.count(procurar)} vez(es) na frase.")
-        print(f"Frase atual: {self.frase}")
 
 
     def mostrar_frase(self):
-        print(f"Frase atual: {self.frase}")
+        return self.frase
 
 
 def main():
@@ -101,5 +97,8 @@ def main():
         else:
             print("Opção inválida, tente novamente.")
 
-        
-main()
+        print("Frase atual:", frases.mostrar_frase())
+
+
+if __name__ == "__main__":    
+    main()
