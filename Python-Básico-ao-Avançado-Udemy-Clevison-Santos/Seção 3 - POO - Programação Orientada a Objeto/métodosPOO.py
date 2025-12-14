@@ -18,6 +18,10 @@ class Termostato:
         print(f"Temperatura configurada para {nova_temperatura}°")
 
 
+    def mostrar_temperatura(self):
+        print(f"Temperatura atual: {self.temperatura_atual}°")
+
+
 meu_termostato = Termostato()
 
 meu_termostato.aumentar_temperatura(5) # Temperatura aumentada em: 5°, Nova temperatura: 25°
@@ -25,3 +29,13 @@ meu_termostato.aumentar_temperatura(5) # Temperatura aumentada em: 5°, Nova tem
 meu_termostato.diminuir_temperatura(5) # Temperatura diminuída em: 5°, Nova temperatura: 20°
 
 meu_termostato.configurar_temperatura(19) # Temperatura configurada para 19°
+
+meu_termostato.mostrar_temperatura() # Temperatura atual: 19°
+
+meu_termostato.aumentar_temperatura(26) # Temperatura aumentada em: 26°, Nova temperatura: 45°
+
+meu_termostato.diminuir_temperatura(15) # Temperatura diminuída em: 15°, Nova temperatura: 30°
+
+meu_termostato.configurar_temperatura(15) # Temperatura configurada para 15°
+
+meu_termostato.mostrar_temperatura() # Temperatura atual: 15°
