@@ -57,22 +57,37 @@ class FormatadorDeFrase:
         print(f"Frase atual: {self.frase}")
 
 
-frases = FormatadorDeFrase("Python é muito legal!")
+def main():
+    frase = input("Digite uma frase: ")
+    
+    frases = FormatadorDeFrase(frase)
 
-frases.maiusculas()
+    while True:
+        print("Escolha uma opção para formatar sua frase:")
+        print("1. ")
+        print("2. ")
+        print("3. ")
+        print("4. ")
+        print("5. ")
+        print("6. ")
+        print("7. ")
+        print("8. ")
+        print("9. ")
+        print("10. ")
+        frases.maiusculas()
 
-frases.minusculas()
+        frases.minusculas()
 
-frases.capitalizadas()
+        frases.capitalizadas()
 
-frases.titulo()
+        frases.titulo()
 
-frases.contar_vogais()
+        frases.contar_vogais()
 
-frases.contar_consoantes()
+        frases.contar_consoantes()
 
-frases.contar_a()
+        frases.contar_a()
 
-frases.mostrar_frase()
+        frases.mostrar_frase()
 
-frases.procurar_frase()
+        frases.procurar_frase()
