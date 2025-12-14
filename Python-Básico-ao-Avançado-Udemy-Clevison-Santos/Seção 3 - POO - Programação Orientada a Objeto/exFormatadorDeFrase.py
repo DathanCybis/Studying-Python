@@ -22,7 +22,6 @@ class FormatadorDeFrase:
     def contar_vogais(self):
         count = 0
         vogais = "aeiouàáâãéêíóôõü"
-
         for i in self.frase.lower():
             if i in vogais:
                 count += 1
@@ -30,12 +29,11 @@ class FormatadorDeFrase:
 
 
     def contar_consoantes(self):
-        count = len(self.frase)
-        vogais = "aeiouàáâãéêíóôõü"
-
+        count = 0
+        consoantes = "bcçdfghjklmnpqrstvwxyz"
         for i in self.frase.lower():
-            if i in vogais:
-                count -= 1
+            if i in consoantes:
+                count += 1
         print(f"A frase contém {count} consoantes!")
 
 
@@ -44,9 +42,9 @@ class FormatadorDeFrase:
 
 
     def procurar_frase(self):
-        procurar = input("Qual frase deseja procurar: ")
+        procurar = input("Qual frase deseja procurar: ").lower()
 
-        print(f"A palavra '{procurar}' aparece {self.frase.count(procurar)} vez(es) na frase.")
+        print(f"A palavra '{procurar}' aparece {self.frase.lower().count(procurar)} vez(es) na frase.")
 
 
     def mostrar_frase(self):
@@ -90,7 +88,8 @@ def main():
         elif opc == "8":
             frases.procurar_frase()
         elif opc == "9":
-            frases.mostrar_frase()
+            print("Frase:",frases.mostrar_frase())
+            continue
         elif opc == "10":
             print("Saindo do programa...")
             break
