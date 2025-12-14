@@ -21,20 +21,20 @@ class FormatadorDeFrase:
 
     def contar_vogais(self):
         count = 0
+        vogais = "aeiouàáâãéêíóôõü"
+
         for i in self.frase.lower():
-            if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
-                count += 1
-            elif i == "á" or i == "é" or i == "í" or i == "ó" or i == "ú":
+            if i in vogais:
                 count += 1
         print(f"A frase contém {count} vogais!")
 
 
     def contar_consoantes(self):
         count = len(self.frase)
+        vogais = "aeiouàáâãéêíóôõü"
+
         for i in self.frase.lower():
-            if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
-                count -= 1
-            elif i == "á" or i == "é" or i == "í" or i == "ó" or i == "ú":
+            if i in vogais:
                 count -= 1
         print(f"A frase contém {count} consoantes!")
 
