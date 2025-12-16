@@ -14,6 +14,7 @@ class Evento:
     def cancelar(self):
         if self.lugares < 10:
             self.lugares += 1
+            print(f"Reserva cancelada com sucesso! {self.lugares} assentos restantes.")
         else:
             print("Não há nenhuma reserva para cancelar.")
 
@@ -21,12 +22,12 @@ class Evento:
 def main():
     evento = Evento()
     while True:
-        print("Sistema de reservas para um evento")
+        print("\nSistema de reservas para um evento")
         print("1. Reservar")
         print("2. Cancelar")
 
         opc = input("Digite a opção que deseja: ")
-
+        print()
         if opc == "1":
             evento.reservar()
         elif opc == "2":
