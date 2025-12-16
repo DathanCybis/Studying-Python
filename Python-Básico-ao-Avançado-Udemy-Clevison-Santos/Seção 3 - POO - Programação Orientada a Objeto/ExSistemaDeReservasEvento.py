@@ -17,3 +17,17 @@ class Evento:
             print("Não há nenhuma reserva para cancelar.")
 
 
+def main():
+    while True:
+        print("Sistema de reservas para um evento")
+        print("1. Reservar")
+        print("2. Cancelar")
+
+        opc = input("Digite a opção que deseja: ")
+
+        if opc == "1":
+            pass
+        elif opc == "2":
+            pass
+        else:
+            print("Digite uma opção válida!")
