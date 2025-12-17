@@ -1,4 +1,4 @@
-lista = [2, 3]
+lista = [10, 5]
 class ManipuladorDeLista:
     def __init__(self, elemento):
         self.elemento = elemento
@@ -34,10 +34,16 @@ class ManipuladorDeLista:
 
     def encontrar_menor():
         menor = min(lista)
-        print(f"O menor elemento da lista é o: '{menor}'")    
+        print(f"O menor elemento da lista é o: '{menor}'")
+
+
+    def calcular_media():
+        media = sum((lista)) / len(lista)
+        print(f"A média dos elementos da lista é: '{media}'")
 
 
 ManipuladorDeLista.encontrar_maior()
 ManipuladorDeLista.encontrar_menor()
+ManipuladorDeLista.calcular_media()
 
 print(lista)
