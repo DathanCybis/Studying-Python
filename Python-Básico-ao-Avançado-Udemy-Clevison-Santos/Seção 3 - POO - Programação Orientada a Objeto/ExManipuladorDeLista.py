@@ -46,8 +46,32 @@ class ManipuladorDeLista:
         print(f"A lista atual é: {lista}")
 
 
+def menu():
+    while True:
+        print("\nEscolha uma opção:")
+        print("1. Adicionar elemento")
+        print("2. Remover elemento")
+        print("3. Encontrar maior elemento")
+        print("4. Encontrar menor elemento")
+        print("5. Calcular média dos elementos")
+        print("6. Mostrar lista")
+        print("7. Sair")
 
-ManipuladorDeLista.encontrar_maior()
-ManipuladorDeLista.encontrar_menor()
-ManipuladorDeLista.calcular_media()
-ManipuladorDeLista.mostrar_lista()
+        opc = input("Digite a opção desejada:")
+
+        if opc == "1":
+            ManipuladorDeLista.adicionar_elemento()
+        elif opc == "1":
+            ManipuladorDeLista.remover_elemento()
+        elif opc == "1":
+            ManipuladorDeLista.encontrar_maior()
+        elif opc == "1":
+            ManipuladorDeLista.encontrar_menor()
+        elif opc == "1":
+            pass
+        elif opc == "1":
+            pass
+        elif opc == "1":
+            pass
+        else:
+            print("Por favor, digite uma opção válida!")
