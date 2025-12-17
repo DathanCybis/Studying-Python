@@ -29,10 +29,15 @@ class ManipuladorDeLista:
 
     def encontrar_maior():
         maior = max(lista)
-        print(f"O maior elemento da lista é: {maior}")
+        print(f"O maior elemento da lista é o: '{maior}'")
 
 
-numero = ManipuladorDeLista.encontrar_maior()
+    def encontrar_menor():
+        menor = min(lista)
+        print(f"O menor elemento da lista é o: '{menor}'")    
+
+
+ManipuladorDeLista.encontrar_maior()
+ManipuladorDeLista.encontrar_menor()
 
 print(lista)
-print(numero)
