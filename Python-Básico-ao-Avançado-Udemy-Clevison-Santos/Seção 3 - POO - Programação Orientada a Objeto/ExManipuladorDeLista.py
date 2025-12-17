@@ -42,8 +42,12 @@ class ManipuladorDeLista:
         print(f"A média dos elementos da lista é: '{media}'")
 
 
+    def mostrar_lista():
+        print(f"A lista atual é: {lista}")
+
+
+
 ManipuladorDeLista.encontrar_maior()
 ManipuladorDeLista.encontrar_menor()
 ManipuladorDeLista.calcular_media()
-
-print(lista)
+ManipuladorDeLista.mostrar_lista()
