@@ -1,16 +1,18 @@
-lista = [10, 5]
+lista = []
 class ManipuladorDeLista:
     def __init__(self, elemento):
         self.elemento = elemento
 
 
     def adicionar_elemento():
-        num = input("Digite um número inteiro para adicionar: ")
-
-        if num == int:
-            lista.append(int(num))
-        else:
+        try:
+            num = int(input("Digite um número inteiro para adicionar: "))
+        except:
             print("Por favor, digite um número inteiro!")
+            return
+
+        lista.append(num)
+        print(f"Elemento '{num}' adicionado com sucesso!")
 
 
     def remover_elemento():
@@ -57,21 +59,24 @@ def menu():
         print("6. Mostrar lista")
         print("7. Sair")
 
-        opc = input("Digite a opção desejada:")
+        opc = input("\nDigite a opção desejada: ")
 
         if opc == "1":
             ManipuladorDeLista.adicionar_elemento()
-        elif opc == "1":
+        elif opc == "2":
             ManipuladorDeLista.remover_elemento()
-        elif opc == "1":
+        elif opc == "3":
             ManipuladorDeLista.encontrar_maior()
-        elif opc == "1":
+        elif opc == "4":
             ManipuladorDeLista.encontrar_menor()
-        elif opc == "1":
-            pass
-        elif opc == "1":
-            pass
-        elif opc == "1":
-            pass
+        elif opc == "5":
+            ManipuladorDeLista.calcular_media()
+        elif opc == "6":
+            ManipuladorDeLista.mostrar_lista()
+        elif opc == "7":
+            print("Fim do programa...\n")
+            break
         else:
             print("Por favor, digite uma opção válida!")
+
+menu()
