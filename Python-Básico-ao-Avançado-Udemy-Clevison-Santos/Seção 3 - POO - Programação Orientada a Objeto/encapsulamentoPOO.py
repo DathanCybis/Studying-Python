@@ -16,3 +16,7 @@ class Pessoa:
     def _aumentar_idade(self):
         self._idade += 1
 
+
+    def __aumentar_saldo(self, quant):
+        self.__saldo += quant
+
