@@ -53,4 +53,5 @@ print(p.mostrar_idade()) # 33
 
 # --- Métodos Privados --- 
 print("\nMétodos Privados:")
-
+p._Pessoa__aumentar_saldo(500) #Não recomendado!
+print(p.depositar(0)) # 6500
