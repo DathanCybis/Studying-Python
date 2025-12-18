@@ -44,5 +44,13 @@ print(p.depositar(1500)) # 1500
 print(p.depositar(1000)) # 2500
 print(p.depositar(3500)) # 6000
 
+# --- Métodos Protegidos --- 
+print("\nMétodos Protegidos:")
+p._aumentar_idade() #Não recomendado
+p._aumentar_idade() #Não recomendado
+p._aumentar_idade() #Não recomendado
+print(p.mostrar_idade()) # 33
+
 # --- Métodos Privados --- 
 print("\nMétodos Privados:")
+
