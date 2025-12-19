@@ -25,3 +25,9 @@ p1 = Produto("Camiseta", 50)
 
 print(f"Preço atual de {p1.nome}: R${p1.get_preco()}") # Preço atual de Camiseta: R$50
 
+p1.set_preco(60)
+
+print(f"Preço atualizado de {p1.nome}: R${p1.get_preco()}") # Preço atualizado de Camiseta: R$60
+
+p1.set_preco(-10) # O preço não pode ser negativo
+
