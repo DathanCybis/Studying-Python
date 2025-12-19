@@ -31,3 +31,6 @@ print(f"Preço atualizado de {p1.nome}: R${p1.get_preco()}") # Preço atualizado
 
 p1.set_preco(-10) # O preço não pode ser negativo
 
+p1.aplicar_desconto(10) # 10%
+
+print(f"Preço de {p1.nome} após desconto: R${p1.get_preco()}") # Preço de Camiseta após desconto: R$54.0
