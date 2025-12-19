@@ -1,36 +1,34 @@
 class Pet:
-    def __init__(self, nome=None, idade=None, peso=None):
-        self._nome = nome
-        self._idade = idade
-        self._peso = peso
+    def __init__(self):
+        self._nome = ""
+        self._idade = 0
+        self._peso = 0.0
 
-
-    def get_nome(self):
-        return self._nome
-    
-
-    def get_idade(self):
-        return self._idade
-
-
-    def get_peso(self):
-        return self._peso
-    
 
     def set_nome(self, nome):
         try:
-            if nome == str(nome):
+            str(nome)
+            if nome.isalpha():
                 self._nome = nome
+            else:
+                print("O nome deve ser uma string e não vazio")
         except:
-            print("O nome deve ser uma string e não vazio")
+            print("O nome deve ser uma string e não vazio!")
         
     
     def set_idade(self, idade):
-        self._idade = idade
+        if idade == int(idade) and idade >= 0:
+            self._idade = idade
+        else:
+            print("A idade deve ser um número inteiro e maior ou igual a 0")
 
 
     def set_peso(self, peso):
-        self._peso = peso
+        peso = float(peso)
+        if peso >= 0:
+            self._peso = peso
+        else:
+            print("O peso deve ser flutuante e maior ou igual a 0")
 
 
     def exibir_infos(self):
