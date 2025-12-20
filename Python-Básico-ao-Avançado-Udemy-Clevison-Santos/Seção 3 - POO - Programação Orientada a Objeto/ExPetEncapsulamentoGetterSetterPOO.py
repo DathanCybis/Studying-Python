@@ -62,6 +62,14 @@ def main():
             meu_pet.set_nome("Bob")
         elif opc == "2":
             meu_pet.set_idade(2)
+        elif opc == "3":
+            meu_pet.set_peso(4)
+        elif opc == "4":
+            meu_pet.exibir_infos()
+        elif opc == "5":
+            print("Saindo...")
+        else:
+            print("Opção inválida, tente novamente.")
 
 
-
+main()
