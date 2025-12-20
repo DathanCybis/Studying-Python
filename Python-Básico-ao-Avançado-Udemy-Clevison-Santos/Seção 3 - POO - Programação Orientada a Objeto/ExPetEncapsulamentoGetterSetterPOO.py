@@ -59,11 +59,14 @@ def main():
         opc = input("\nDigite a opção desejada: ")
 
         if opc == "1":
-            meu_pet.set_nome("Bob")
+            nome = input("Nome: ")
+            meu_pet.set_nome(nome)
         elif opc == "2":
-            meu_pet.set_idade(2)
+            idade = int(input("Idade: "))
+            meu_pet.set_idade(idade)
         elif opc == "3":
-            meu_pet.set_peso(4)
+            peso = input("Peso: ")
+            meu_pet.set_peso(peso)
         elif opc == "4":
             meu_pet.exibir_infos()
         elif opc == "5":
