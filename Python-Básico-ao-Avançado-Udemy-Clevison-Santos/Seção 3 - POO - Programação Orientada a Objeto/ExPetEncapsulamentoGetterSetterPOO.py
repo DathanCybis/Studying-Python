@@ -56,5 +56,12 @@ def main():
         print("4. Exibir informações do pet")
         print("5. Sair")
 
+        opc = input("\nDigite a opção desejada: ")
+
+        if opc == "1":
+            meu_pet.set_nome("Bob")
+        elif opc == "2":
+            meu_pet.set_idade(2)
+
 
 
