@@ -55,6 +55,8 @@ def mostrar_menu():
 
     opc = input("\nDigite a opção desejada: ")
 
+    return opc
+
 
 def main():
     meu_pet = Pet()
@@ -64,12 +66,23 @@ def main():
         if opc == "1":
             nome = input("Nome: ")
             meu_pet.set_nome(nome)
+
         elif opc == "2":
+            try:
+                pass
+            except:
+                pass
+
+
             idade = int(input("Idade: "))
             meu_pet.set_idade(idade)
+
+
         elif opc == "3":
             peso = input("Peso: ")
             meu_pet.set_peso(peso)
+
+
         elif opc == "4":
             meu_pet.exibir_infos()
         elif opc == "5":
