@@ -46,17 +46,20 @@ class Pet:
         print(f"Peso: {self._peso} kg")
 
 
+def mostrar_menu():
+    print("\n1. Definir nome do pet")
+    print("2. Definir idade do pet")
+    print("3. Definir peso do pet")
+    print("4. Exibir informações do pet")
+    print("5. Sair")
+
+    opc = input("\nDigite a opção desejada: ")
+
 
 def main():
     meu_pet = Pet()
     while True:
-        print("\n1. Definir nome do pet")
-        print("2. Definir idade do pet")
-        print("3. Definir peso do pet")
-        print("4. Exibir informações do pet")
-        print("5. Sair")
-
-        opc = input("\nDigite a opção desejada: ")
+        opc = mostrar_menu()
 
         if opc == "1":
             nome = input("Nome: ")
