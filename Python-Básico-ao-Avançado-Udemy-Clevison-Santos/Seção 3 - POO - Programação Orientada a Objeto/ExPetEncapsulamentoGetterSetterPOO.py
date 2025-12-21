@@ -69,14 +69,10 @@ def main():
 
         elif opc == "2":
             try:
-                pass
-            except:
-                pass
-
-
-            idade = int(input("Idade: "))
-            meu_pet.set_idade(idade)
-
+                idade = int(input("Idade: "))
+                meu_pet.set_idade(idade)
+            except ValueError:
+                print("Idade inválida, por favor insira um número inteiro.")
 
         elif opc == "3":
             peso = input("Peso: ")
