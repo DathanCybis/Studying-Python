@@ -75,14 +75,17 @@ def main():
                 print("Idade inválida, por favor insira um número inteiro.")
 
         elif opc == "3":
-            peso = input("Peso: ")
-            meu_pet.set_peso(peso)
-
+            try:
+                peso = input("Peso: ")
+                meu_pet.set_peso(peso)
+            except ValueError:
+                print("Peso inválido, por favor insira um número positivo.")
 
         elif opc == "4":
             meu_pet.exibir_infos()
         elif opc == "5":
             print("Saindo...")
+            break
         else:
             print("Opção inválida, tente novamente.")
 
