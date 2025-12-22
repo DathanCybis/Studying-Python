@@ -22,4 +22,19 @@ class Retangulo:
         return self._altura
     
 
+    @altura.setter
+    def altura(self, valor):
+        if valor > 0:
+            self._altura = valor
+        else:
+            print("Altura deve ser maior que 0")
+
+    @property
+    def area(self):
+        return self._largura * self._altura
+    
+
+r = Retangulo(5, 6)
+
+print("Área:", r.area) # Área: 30
 
