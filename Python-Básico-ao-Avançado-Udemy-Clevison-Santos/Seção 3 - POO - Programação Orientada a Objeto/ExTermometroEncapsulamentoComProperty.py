@@ -1,6 +1,7 @@
 class Termometro:
-    def __init__(self, temperatura):
-        self._temperatura = temperatura
+    def __init__(self):
+        pass
+
 
     @property
     def temperatura(self):
@@ -15,3 +16,14 @@ class Termometro:
             print("Certifique-se que a temperatura esteja entre -100 e 100")
 
 
+t = Termometro()
+
+t.temperatura = 25
+
+print(t.temperatura) # 25
+
+t.temperatura = 250 # Certifique-se que a temperatura esteja entre -100 e 100
+
+t.temperatura = 27
+
+print(t.temperatura) # 27
