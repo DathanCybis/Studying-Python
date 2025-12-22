@@ -38,3 +38,8 @@ r = Retangulo(5, 6)
 
 print("Área:", r.area) # Área: 30
 
+r.largura = 7
+
+print("Nova Área:", r.area) # Nova Área: 42
+
+r.largura = -5 # Largura deve ser maior que 0
