@@ -1,6 +1,6 @@
 class Termometro:
     def __init__(self):
-        pass
+        self._temperatura = 0
 
 
     @property
