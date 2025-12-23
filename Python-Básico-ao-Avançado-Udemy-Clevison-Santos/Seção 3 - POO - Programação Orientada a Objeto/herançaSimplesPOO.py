@@ -19,4 +19,14 @@ class Estudante(Pessoa):
         print(f"{self.nome} está estudando)")
 
 
-    
+class Professor(Pessoa):
+    def __init__(self, nome, idade, disciplina):
+
+        Pessoa.__init__(nome, idade)
+        self.disciplina = disciplina
+
+
+    def ensinando(self):
+        print(f"{self.nome} está ensinando {self.disciplina}")
+
+
