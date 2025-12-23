@@ -26,7 +26,7 @@ class Professor(Pessoa):
         self.disciplina = disciplina
 
 
-    def ensinando(self):
+    def ensinar(self):
         print(f"{self.nome} está ensinando {self.disciplina}")
 
 
@@ -39,4 +39,5 @@ professor = Professor("Carlos", 50, "Matemática")
 pessoa.exibir_info() # Nome: Maria, Idade: 40
 estudante.exibir_info() # Nome: João, Idade: 18
 estudante.estudar() # João está estudando.
-
+professor.exibir_info() # Nome: Carlos, Idade: 50
+professor.ensinar() # Carlos está ensinando Matemática
