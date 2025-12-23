@@ -23,8 +23,7 @@ class Cachorro(Animal):
 
 
 class Gato(Animal):
-    def __init__(self, animal, som):
-        Animal.__init__(self, animal, som)
+    def __init__(self):
         self.animal = "Gato"
         self.som = "Miau"
 
@@ -43,6 +42,11 @@ animal.fazer_som() # O Porco faz Oinc-Oinc
 print()
 
 cachorro = Cachorro()
-cachorro.fazer_som()
-cachorro.latir()
+cachorro.fazer_som() # O Cachorro faz Au Au
+cachorro.latir() # Woof-Woof
 
+print()
+
+gato = Gato()
+gato.fazer_som() # O Gato faz Miau
+gato.miar() # Miauuuu
