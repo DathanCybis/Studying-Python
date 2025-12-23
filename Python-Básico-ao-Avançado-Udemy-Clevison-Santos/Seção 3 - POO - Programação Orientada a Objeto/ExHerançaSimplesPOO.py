@@ -1,43 +1,28 @@
 class Animal():
-    def __init__(self, animal, som):
-        self.animal = animal
-        self.som = som
-
-
     def fazer_som(self):
-        print(f"O {self.animal} faz {self.som}")
+        print(f"O animal faz um som")
 
 
 class Cachorro(Animal):
-    def __init__(self):
-        self.animal = "Cachorro"
-        self.som = "Au Au"
-
-    
     def latir(self):
         print("Woof-Woof")
 
 
     def fazer_som(self):
-        print(f"O {self.animal} faz {self.som}")
+        print("O cachorro faz Au-Au")
 
 
 class Gato(Animal):
-    def __init__(self):
-        self.animal = "Gato"
-        self.som = "Miau"
-
-
     def miar(self):
         print("Miauuuu")
 
 
     def fazer_som(self):
-        print(f"O {self.animal} faz {self.som}")
+        print(f"O gato faz miau")
 
 
-animal = Animal("Porco", "Oinc-Oinc")
-animal.fazer_som() # O Porco faz Oinc-Oinc
+animal = Animal()
+animal.fazer_som() # O animal faz um som
 
 print()
 
@@ -48,5 +33,5 @@ cachorro.latir() # Woof-Woof
 print()
 
 gato = Gato()
-gato.fazer_som() # O Gato faz Miau
+gato.fazer_som() # O Gato faz miau
 gato.miar() # Miauuuu
