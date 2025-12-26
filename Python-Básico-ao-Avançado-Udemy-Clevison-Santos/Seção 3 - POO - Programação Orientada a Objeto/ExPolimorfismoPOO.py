@@ -1,19 +1,26 @@
 class Impressora:
     def imprimir(self, arg):
         if isinstance(arg, str):
-            print("É uma string")
+            print(f"Imprimindo texto: {arg}")
         elif isinstance(arg, list):
-            print("É uma lista")
+            print("Imprimindo lista de textos:")
+
+            for item in arg:
+                print(f" - {item}")
+
         elif isinstance(arg, dict):
-            print("É um dicionário")
+            print("Imprimindo dicionários de textos:")
+
+            for i, j in arg.items():
+                print(f" - {i}: {j}")
         else:
-            print("Nenhuma opção encontrada!")
+            print("Tipo de dado não suportado para impressão")
 
 
 imp = Impressora()
 
-imp.imprimir("teste") # É uma string
+imp.imprimir("teste") # Imprimindo texto: teste
 
-imp.imprimir(["testando", "12"]) # É uma lista
+imp.imprimir(["testando", "12"]) # Imprimindo lista de textos: \n  - testando \n  - 12
 
-imp.imprimir({"teste": 12}) # É um dicionário
+imp.imprimir({"testes": "23"}) # Imprimindo dicionários de textos: \n  - testes: 23
