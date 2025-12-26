@@ -24,3 +24,7 @@ imp.imprimir("teste") # Imprimindo texto: teste
 imp.imprimir(["testando", "12"]) # Imprimindo lista de textos: \n  - testando \n  - 12
 
 imp.imprimir({"testes": "23"}) # Imprimindo dicionários de textos: \n  - testes: 23
+
+imp.imprimir(23) # Tipo de dado não suportado para impressão
+
+imp.imprimir(("teste", "testando")) # Tipo de dado não suportado para impressão
