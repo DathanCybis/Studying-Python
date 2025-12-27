@@ -3,17 +3,17 @@ class Veiculo():
         print("O veículo está se movendo")
 
 
-class Carro():
+class Carro(Veiculo):
     def mover(self):
         print("O carro está se movendo na estrada")
 
 
-class Barco():
+class Barco(Veiculo):
     def mover(self):
         print("O barco está se movendo na água")
 
 
-class Aviao():
+class Aviao(Veiculo):
     def mover(self):
         print("O avião está se movendo no céu")
 
