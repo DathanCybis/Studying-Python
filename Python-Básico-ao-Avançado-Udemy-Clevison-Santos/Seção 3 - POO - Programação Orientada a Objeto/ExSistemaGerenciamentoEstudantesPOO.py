@@ -1,18 +1,40 @@
+alunos = []
 class Estudante:
-    def __init__(self, nome, idade, nota):
-        self.nome = nome
-        self.idade = idade
-        self.nota = nota
+    def __init__(self):
+        self.nome = ""
+        self.idade = 0
+        self.nota = 0.0
 
     
+    def adicionar_estudante(self):
+        nome = input("Digite o nome do estudante: ")
+        try:
+            idade = int(input("Digite a idade do estudante: "))
+            if idade > 0:
+                pass
+        except:
+            print("Digite um número inteiro válido.")
+
+        try:
+            nota = float(input("Digite a nota do estudante: "))
+            if nota > 0 and nota <= 10:
+                pass
+        except:
+            print("Digite um número flutuante válido.")
+
+        alunos.append([nome, idade, nota])
+        print("Estudante adicionado com sucesso!")
 
 
+    def listar_estudantes(self):
+        for n in alunos:
+            print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
 
 
 def main():
-    estudantes = []
 
     while True:
+        estudante = Estudante()
         print("\n --- Menu --- ")
         print("1. Adicionar um novo estudante")
         print("2. Atualizar a nota de um estudante existente")
@@ -23,15 +45,18 @@ def main():
         opc = input("Digite a opção desejada: ")
 
         if opc == "1":
-            pass
+            estudante.adicionar_estudante()
         elif opc == "2":
             pass
         elif opc == "3":
             pass
         elif opc == "4":
-            pass
+            estudante.listar_estudantes()
         elif opc == "5":
             print("Saindo...")
             break
         else:
             print("Tente novamente, opção inválida!")
+
+
+main()
