@@ -40,20 +40,18 @@ class Estudante:
             print("Digite um número flutuante válido.")
 
 
-    def visualizar_estudante():
+    def visualizar_estudante(self):
         nome = input("Digite o nome do estudante que deseja atualizar a nota: ")
         for i, v in enumerate(alunos):
             if alunos[i][0] == nome:
                 print(f"Nome: {v[0]}, Idade: {v[1]}, Nota: {v[2]}")
+            else:
+                print("Aluno não encontrado.")
         
-
 
     def listar_estudantes(self):
         for n in alunos:
             print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
-
-
-    
 
 
 def main():
