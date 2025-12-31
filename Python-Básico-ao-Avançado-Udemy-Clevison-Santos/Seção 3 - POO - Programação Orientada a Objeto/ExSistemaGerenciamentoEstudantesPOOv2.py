@@ -64,30 +64,30 @@ def menu():
                     estudante.set_nota(nova_nota)
 
                     print(f"Nota atualizada com sucesso!")
-                break
+                    break
             else:
                 print("Estudante não encontrado!")        
-    
+
+
         elif opc == "3":
             nome = input("Digite o nome do estudante para visualizar as informações: ")
 
             for estudante in estudantes:
                 if estudante.get_nome() == nome:
                     print(f"Nome: {estudante.get_nome()}, Idade: {estudante.get_idade()}, Nota: {estudante.get_nota()}")
-                break
+                    break
             else:
                 print("Estudante não encontrado!")
 
 
         elif opc == "4":
             print("Listando todos os estudantes: ")
-
             if estudantes:
-                for n in estudantes:
-                    print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
+                for estudante in estudantes:
+                    print(f"Nome: {estudante.get_nome()}, Idade: {estudante.get_idade()}, Nota: {estudante.get_nota()}")
+
             else:
                 print("Nenhum aluno foi cadastrado!")
-
 
 
         elif opc == "5":
