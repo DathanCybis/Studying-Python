@@ -29,14 +29,15 @@ class Estudante:
     def atualizar_nota(self):
         nome = input("Digite o nome do estudante que deseja atualizar a nota: ")
 
-#        try:
-        nota = float(input("Digite a nota do estudante: "))
-        if nota > 0 and nota <= 10:
-            for i, v in enumerate(alunos):
-                if alunos[i][v[0]] == nome:
-                    v[2] = nota
-#        except:
-#            print("Digite um número flutuante válido.")
+        try:
+            nota = float(input("Digite a nota do estudante: "))
+            if nota > 0 and nota <= 10:
+                for i, v in enumerate(alunos):
+                    if alunos[i][0] == nome:
+                        alunos[i][2] = nota
+                print("Nota atualizada com sucesso!")
+        except:
+            print("Digite um número flutuante válido.")
 
 
     def listar_estudantes(self):
