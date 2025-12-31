@@ -12,6 +12,9 @@ class Estudante:
             idade = int(input("Digite a idade do estudante: "))
             if idade > 0:
                 pass
+            else:
+                print("Digite um número inteiro válido.")
+                idade = 0
         except:
             print("Digite um número inteiro válido.")
 
@@ -19,6 +22,9 @@ class Estudante:
             nota = float(input("Digite a nota do estudante: "))
             if nota > 0 and nota <= 10:
                 pass
+            else:
+                print("Digite uma nota válida.")
+                nota = 0.0
         except:
             print("Digite um número flutuante válido.")
 
