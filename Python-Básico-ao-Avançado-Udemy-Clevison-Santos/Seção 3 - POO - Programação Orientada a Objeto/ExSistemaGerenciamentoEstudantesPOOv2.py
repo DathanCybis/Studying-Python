@@ -1,4 +1,3 @@
-alunos = []
 class Estudante:
     def __init__(self, nome, idade, nota):
         self.nome = nome
@@ -65,13 +64,32 @@ def menu():
                     estudante.set_nota(nova_nota)
 
                     print(f"Nota atualizada com sucesso!")
-            break
-
+                break
+            else:
+                print("Estudante não encontrado!")        
     
         elif opc == "3":
-            estudante.visualizar_estudante()
+            nome = input("Digite o nome do estudante para visualizar as informações: ")
+
+            for estudante in estudantes:
+                if estudante.get_nome() == nome:
+                    print(f"Nome: {estudante.get_nome()}, Idade: {estudante.get_idade()}, Nota: {estudante.get_nota()}")
+                break
+            else:
+                print("Estudante não encontrado!")
+
+
         elif opc == "4":
-            estudante.listar_estudantes()
+            print("Listando todos os estudantes: ")
+
+            if estudantes:
+                for n in estudantes:
+                    print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
+            else:
+                print("Nenhum aluno foi cadastrado!")
+
+
+
         elif opc == "5":
             print("Saindo...")
             break
