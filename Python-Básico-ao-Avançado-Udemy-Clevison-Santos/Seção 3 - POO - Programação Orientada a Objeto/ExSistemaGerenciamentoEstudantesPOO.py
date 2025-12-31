@@ -56,8 +56,11 @@ class Estudante:
         
 
     def listar_estudantes(self):
-        for n in alunos:
-            print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
+        if alunos:
+            for n in alunos:
+                print(f"Nome: {n[0]}, Idade: {n[1]}, Nota: {n[2]}")
+        else:
+            print("Nenhum aluno foi cadastrado!")
 
 
 def main():
