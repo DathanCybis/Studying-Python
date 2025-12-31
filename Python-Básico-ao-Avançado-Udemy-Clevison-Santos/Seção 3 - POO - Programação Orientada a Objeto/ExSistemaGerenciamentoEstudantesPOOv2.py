@@ -56,7 +56,16 @@ def menu():
 
 
         elif opc == "2":
-            pass
+            nome = input("Digite o nome do estudante que deseja atualizar a nota: ")
+
+            for estudante in estudantes:
+                if estudante.get_nome() == nome:
+                    nova_nota = float(input("Digite a nova nota: "))
+
+                    estudante.set_nota(nova_nota)
+
+                    print(f"Nota atualizada com sucesso!")
+            break
 
     
         elif opc == "3":
