@@ -5,7 +5,31 @@ class Contato:
         self.email = email
 
 
-class Agenda:
+    def get_nome(self):
+        return self.nome
+
+
+    def get_nome(self):
+        return self.nome
+    
+
+    def get_nome(self):
+        return self.nome
+    
+
+    def set_nome(self, nome):
+        self.nome = nome
+
+
+    def set_telefone(self, telefone):
+        self.telefone = telefone
+
+
+    def set_nome(self, email):
+        self.email = email
+
+
+class Agenda(Contato):
     def adicionar_contatos(self):
         pass
 
