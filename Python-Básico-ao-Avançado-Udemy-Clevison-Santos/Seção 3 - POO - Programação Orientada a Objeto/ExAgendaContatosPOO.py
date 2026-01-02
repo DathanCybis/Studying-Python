@@ -73,7 +73,15 @@ def menu():
 
 
         elif opc == "2":
-            pass
+            nome = input("Nome do contato que deseja excluir: ")
+
+            for contato in contatos:
+                if contato.get_nome() == nome:
+                    contatos.remove(contato)
+                    print("Contato removido com sucesso!")
+                    break
+            else:
+                print("Contato não encontrado.")
 
 
         elif opc == "3":
