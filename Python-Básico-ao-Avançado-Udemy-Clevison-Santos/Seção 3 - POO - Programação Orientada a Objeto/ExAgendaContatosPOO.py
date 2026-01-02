@@ -10,5 +10,14 @@ class Contato:
 
 
 class Agenda:
-    pass
+    def adicionar_contatos(self):
+        pass
 
+    def remover_contatos(self):
+        pass
+
+    def listar_contatos(self):
+        pass
+
+    def buscar_contatos(self):
+        pass
