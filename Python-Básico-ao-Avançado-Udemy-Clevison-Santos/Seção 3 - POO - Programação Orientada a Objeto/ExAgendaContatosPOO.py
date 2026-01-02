@@ -41,6 +41,8 @@ class Agenda(Contato):
 
     def listar_contatos(self):
         super().get_nome()
+        super().get_telefone()
+        super().get_email()
 
     def buscar_contatos(self):
         pass
@@ -85,7 +87,14 @@ def menu():
 
 
         elif opc == "4":
-            pass
+            nome = input("Nome do contato que deseja encontrar: ")
+
+            for contato in contatos:
+                if contato.get_nome() == nome:
+                    print(f"Nome: {contato.get_nome()}, Telefone: {contato.get_telefone()}, Email: {contato.get_email()}")
+                    break
+            else:
+                print("Contato não encontrado.")
 
 
         elif opc == "5":
