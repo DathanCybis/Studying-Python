@@ -25,26 +25,29 @@ class Contato:
         self.telefone = telefone
 
 
-    def set_nome(self, email):
+    def set_email(self, email):
         self.email = email
 
 
 class Agenda(Contato):
-    def adicionar_contatos(self):
-        pass
+    def adicionar_contatos(self, nome, telefone, email):
+        super().set_nome(nome)
+        super().set_telefone(telefone)
+        super().set_email(email)
+
 
     def remover_contatos(self):
         pass
 
     def listar_contatos(self):
-        pass
+        super().get_nome()
 
     def buscar_contatos(self):
         pass
 
 
 def menu():
-    agenda = Agenda()
+    contatos = []
     while True:
         print("1. Adicionar contatos")
         print("2. Remover contatos")
@@ -55,13 +58,34 @@ def menu():
         opc = input("Digite a opção desejada: ")
 
         if opc == "1":
-            agenda.adicionar_contatos()
+            nome = input("Nome: ")
+            telefone = input("Telefone: ")
+            email = input("Email: ")
+
+            novo_contato = Agenda(nome, telefone, email)
+            contatos.append(novo_contato)
+
+            print("Contato adicionado com sucesso!")
+
+
         elif opc == "2":
-            agenda.remover_contatos()
+            pass
+
+
         elif opc == "3":
-            agenda.listar_contatos()
+            print("Listando todos os contatos...")
+
+            if contatos:
+                for contato in contatos:
+                    print(f"Nome: {contato.get_nome()}, Telefone: {contato.get_telefone()}, Email: {contato.get_email()}")
+            else:
+                print("Nenhum contato foi cadastrado.")
+
+
         elif opc == "4":
-            agenda.buscar_contatos()
+            pass
+
+
         elif opc == "5":
             print("Saindo...")
             break
