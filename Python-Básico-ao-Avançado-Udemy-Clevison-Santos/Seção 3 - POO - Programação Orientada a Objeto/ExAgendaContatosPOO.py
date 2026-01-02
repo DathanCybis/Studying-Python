@@ -9,12 +9,12 @@ class Contato:
         return self.nome
 
 
-    def get_nome(self):
-        return self.nome
+    def get_telefone(self):
+        return self.telefone
     
 
-    def get_nome(self):
-        return self.nome
+    def get_email(self):
+        return self.email
     
 
     def set_nome(self, nome):
@@ -49,13 +49,15 @@ class Agenda(Contato):
 def menu():
     contatos = []
     while True:
-        print("1. Adicionar contatos")
+        print("\n1. Adicionar contatos")
         print("2. Remover contatos")
         print("3. Listar contatos")
         print("4. Buscar contato")
-        print("5. Sair")
+        print("5. Sair\n")
 
         opc = input("Digite a opção desejada: ")
+
+        print()
 
         if opc == "1":
             nome = input("Nome: ")
