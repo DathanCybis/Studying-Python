@@ -9,8 +9,8 @@ pag.click(x=739, y=1054)
 
 pag.sleep(1)
 
-print(pag.position())
+#print(pag.position())
 
 #pag.typewrite('Word')
 
-
+pag.click(x=721, y=550)
