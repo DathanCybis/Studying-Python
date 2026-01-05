@@ -12,7 +12,7 @@ pag.press('enter')
 
 pag.sleep(1)
 
-pag.typewrite('O notepad foi aberto')
+pag.typewrite('O notepad foi aberto com sucesso em python')
 
 pag.sleep(1)
 
