@@ -6,12 +6,16 @@ pag.sleep(1)
 
 pag.typewrite('notepad')
 
-pag.sleep(2)
+pag.sleep(1)
 
 pag.press('enter')
 
-pag.sleep(3)
+pag.sleep(1)
 
 pag.typewrite('O notepad foi aberto')
 
-pag.sleep(2)
+pag.sleep(1)
+
+fecharJanela = pag.getActiveWindow()
+
+fecharJanela.close()
