@@ -15,3 +15,7 @@ pag.click(x=723, y=489)
 pag.sleep(1)
 
 pag.typewrite('Dolar hoje')
+
+pag.sleep(1)
+
+pag.press('Enter')
