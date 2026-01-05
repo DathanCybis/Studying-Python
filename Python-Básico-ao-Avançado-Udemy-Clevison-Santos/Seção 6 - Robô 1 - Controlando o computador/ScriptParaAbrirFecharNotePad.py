@@ -4,3 +4,7 @@ pag.hotkey('win', 'r')
 
 pag.sleep(0.5)
 
+pag.typewrite('notepad')
+
+pag.sleep(0.5)
+
