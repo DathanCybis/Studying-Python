@@ -29,6 +29,22 @@ if opcao == "Word":
 
 elif opcao == "Google":
     print("Escolheu Google")
+
+    pag.hotkey('win', 'r')
+
+    pag.sleep(0.5)
+
+    pag.typewrite('chrome')
+
+    pag.sleep(0.5)
+
+    pag.press('enter')
+
+    pag.sleep(0.5)
+
+    pag.typewrite('Escolheu abrir o google')
+
+
 elif opcao == "Notepad":
     print("Escolheu Notepad")
 
