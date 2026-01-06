@@ -48,3 +48,17 @@ elif opcao == "Google":
 elif opcao == "Notepad":
     print("Escolheu Notepad")
 
+    pag.hotkey('win', 'r')
+
+    pag.sleep(0.5)
+
+    pag.typewrite('notepad')
+
+    pag.sleep(0.5)
+
+    pag.press('enter')
+
+    pag.sleep(0.5)
+
+    pag.typewrite("Escolheu abrir o notepad")
+
