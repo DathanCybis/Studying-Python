@@ -26,7 +26,7 @@ def obter_cotacao_dolar():
     except Exception as erro:
         print("Erro ao processar os dados:", erro)
 
-
+# Função para obter a cotação do euro usando a API AwesomeAPI
 def obter_cotacao_euro():
     # URL da API para euro em relação ao real
     url = "https://economia.awesomeapi.com.br/json/last/EUR-BRL"
