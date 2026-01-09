@@ -3,4 +3,6 @@ from selenium.webdriver.common.keys import Keys
 import pyautogui as pag
 from selenium.webdriver.common.by import By
 
+navegador = opcoes.Chrome()
 
+navegador.get("https://www.google.com/")
