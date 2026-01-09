@@ -19,5 +19,6 @@ pag.sleep(1)
 
 valorDolar = navegador.find_elements(By.XPATH, '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')[0].text
 
-print(valorDolar)
+pag.sleep(1)
 
+print(valorDolar)
