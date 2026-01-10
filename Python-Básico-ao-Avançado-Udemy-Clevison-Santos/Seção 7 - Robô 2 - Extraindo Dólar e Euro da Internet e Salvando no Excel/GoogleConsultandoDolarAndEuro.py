@@ -35,3 +35,7 @@ pag.sleep(1)
 
 pag.press("enter")
 
+pag.sleep(1)
+
+navegador.find_element(By.NAME, "q").send_keys("Euro hoje")
+
