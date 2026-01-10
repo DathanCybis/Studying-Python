@@ -28,3 +28,10 @@ pag.sleep(1)
 navegador.find_element(By.NAME, "q").send_keys("")
 
 pag.sleep(1)
+
+pag.press("tab")
+
+pag.sleep(1)
+
+pag.press("enter")
+
