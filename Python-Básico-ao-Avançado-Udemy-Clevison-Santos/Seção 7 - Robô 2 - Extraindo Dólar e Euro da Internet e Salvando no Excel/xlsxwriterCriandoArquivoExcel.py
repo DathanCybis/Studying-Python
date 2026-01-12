@@ -1,14 +1,25 @@
-import xlsxwriter 
 import os
+import xlsxwriter
 
-caminhoArquivo = "C\\...\\..."
+# Caminho onde o arquivo será salvo (pasta atual)
+caminho = os.path.join(os.getcwd(), "dados.xlsx")
 
-planilha = xlsxwriter.workbook(caminhoArquivo)
+# Cria o arquivo Excel
+workbook = xlsxwriter.Workbook(caminho)
 
-planilha1 = planilha.add_worksheet()
+# Cria uma planilha
+worksheet = workbook.add_worksheet("Planilha1")
 
-planilha1.write("A1", "Nome")
+# Escrevendo os dados
+worksheet.write("A1", "Nome")
+worksheet.write("B1", "João")
 
-planilha.close()
+worksheet.write("A2", "Idade")
+worksheet.write("B2", 25)
 
-os.startfile(caminhoArquivo)
+# Fecha o arquivo (muito importante)
+workbook.close()
+
+print("Planilha criada com sucesso!")
+
+os.startfile(caminho)
