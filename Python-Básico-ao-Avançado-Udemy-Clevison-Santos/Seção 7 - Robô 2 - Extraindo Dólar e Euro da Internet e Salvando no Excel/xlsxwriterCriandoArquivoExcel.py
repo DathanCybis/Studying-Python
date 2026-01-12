@@ -1,4 +1,8 @@
 import xlsxwriter 
 import os
 
-caminhoArquivo = "C:\"
+caminhoArquivo = "C\\...\\..."
+
+planilha = xlsxwriter.workbook(caminhoArquivo)
+
+
