@@ -79,3 +79,4 @@ workbook.close()
 
 print("Planilha criada com sucesso!")
 
+os.startfile(caminho)
