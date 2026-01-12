@@ -71,6 +71,9 @@ worksheet = workbook.add_worksheet("Planilha1")
 worksheet.write("A1", "Dolar")
 worksheet.write("B1", "Euro")
 
+valorDolar = float(valorDolar)
+valorEuro = float(valorEuro)
+
 worksheet.write("A2", valorDolar)
 worksheet.write("B2", valorEuro)
 
