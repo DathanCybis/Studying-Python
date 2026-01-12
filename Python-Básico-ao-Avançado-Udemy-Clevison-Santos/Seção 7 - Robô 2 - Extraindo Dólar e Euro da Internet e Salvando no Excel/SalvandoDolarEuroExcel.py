@@ -52,8 +52,8 @@ def obter_cotacao_euro():
         print("Erro ao processar os dados:", erro)
 
 # Chamada da função
-obter_cotacao_dolar()
-obter_cotacao_euro()
+valorDolar = obter_cotacao_dolar()
+valorEuro = obter_cotacao_euro()
 
 import os
 import xlsxwriter
@@ -68,11 +68,11 @@ workbook = xlsxwriter.Workbook(caminho)
 worksheet = workbook.add_worksheet("Planilha1")
 
 # Escrevendo os dados
-worksheet.write("A1", "Nome")
-worksheet.write("B1", "João")
+worksheet.write("A1", "Dolar")
+worksheet.write("B1", "Euro")
 
-worksheet.write("A2", "Idade")
-worksheet.write("B2", 25)
+worksheet.write("A2", valorDolar)
+worksheet.write("B2", valorEuro)
 
 # Fecha o arquivo (muito importante)
 workbook.close()
