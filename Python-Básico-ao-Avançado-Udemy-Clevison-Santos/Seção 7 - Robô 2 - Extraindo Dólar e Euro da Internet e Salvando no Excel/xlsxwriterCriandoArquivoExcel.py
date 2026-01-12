@@ -1,4 +1,4 @@
 import xlsxwriter 
 import os
 
-caminhoArquivo = "C://"
+caminhoArquivo = "C:\"
