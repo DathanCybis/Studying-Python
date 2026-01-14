@@ -59,7 +59,7 @@ import os
 import xlsxwriter
 
 # Caminho onde o arquivo será salvo (pasta atual)
-caminho = os.path.join(os.getcwd(), "dados.xlsx")
+caminhoArquivo = os.path.join(os.getcwd(), "dados.xlsx")
 
 # Cria o arquivo Excel
 workbook = xlsxwriter.Workbook(caminho)
