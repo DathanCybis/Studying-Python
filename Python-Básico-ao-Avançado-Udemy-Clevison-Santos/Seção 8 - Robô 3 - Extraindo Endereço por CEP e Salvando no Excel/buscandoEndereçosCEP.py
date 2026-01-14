@@ -18,8 +18,22 @@ def obter_cep(cep):
     return endereco
 
 
+def salvar_endereco(endereco, nome_arquivo="endereco.xlsx"):
+    if "erro" not in endereco:
+        df = pd.DataFrame([endereco])
+
+        df.to_excel(nome_arquivo, index=False)
+
+        print(f"Dados salvos com sucesso no arquivo {nome_arquivo}")
+
+    else:
+        print("Não foi possível salvar os dados: CEP não encontrado.")
+
+
 cep_ex = "01001000"
 
 endereco = obter_cep(cep_ex)
+
+salvar_endereco(endereco)
 
 print(endereco)
