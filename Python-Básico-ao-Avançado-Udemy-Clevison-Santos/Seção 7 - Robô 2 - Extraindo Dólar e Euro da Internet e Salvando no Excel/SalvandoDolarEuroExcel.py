@@ -62,7 +62,7 @@ import xlsxwriter
 caminhoArquivo = os.path.join(os.getcwd(), "dados.xlsx")
 
 # Cria o arquivo Excel
-workbook = xlsxwriter.Workbook(caminho)
+workbook = xlsxwriter.Workbook(caminhoArquivo)
 
 # Cria uma planilha
 worksheet = workbook.add_worksheet("Planilha1")
@@ -82,4 +82,4 @@ workbook.close()
 
 print("Planilha criada com sucesso!")
 
-os.startfile(caminho)
+os.startfile(caminhoArquivo)
