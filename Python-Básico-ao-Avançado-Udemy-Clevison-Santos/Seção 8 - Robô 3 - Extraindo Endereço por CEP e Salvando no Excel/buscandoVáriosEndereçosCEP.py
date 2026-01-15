@@ -2,7 +2,7 @@ import http.client
 import json
 import pandas as pd
 
-def obter_cep(cep):
+def obter_ceps(cep):
     conexao = http.client.HTTPSConnection("viacep.com.br")
 
     conexao.request("GET", f"/ws/{cep}/json/")
@@ -28,10 +28,10 @@ def salvar_endereco(endereco, nome_arquivo="endereco.xlsx"):
         print("Não foi possível salvar os dados: CEP não encontrado.")
 
 
-cep_ex = "01001000"
+ceps_ex = ["01001000", "29114035", "35010-230", "05891160"]
+for cep in ceps_ex:
+    endereco = obter_ceps(cep)
 
-endereco = obter_cep(cep_ex)
+#salvar_endereco(endereco)
 
-salvar_endereco(endereco)
-
-print(endereco)
+    print(endereco)
