@@ -20,7 +20,7 @@ def salvar_endereco(endereco, nome_arquivo="endereco.xlsx"):
     if "erro" not in endereco:
         df = pd.DataFrame([endereco])
 
-        df.to_excel(nome_arquivo, index=False)
+        df.to_excel(nome_arquivo, index=False)        
 
         print(f"Dados salvos com sucesso no arquivo {nome_arquivo}")
 
@@ -32,6 +32,6 @@ ceps_ex = ["01001000", "29114035", "35010-230", "05891160"]
 for cep in ceps_ex:
     endereco = obter_ceps(cep)
 
-#salvar_endereco(endereco)
+    salvar_endereco(endereco)
 
     print(endereco)
