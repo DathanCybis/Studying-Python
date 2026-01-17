@@ -14,6 +14,11 @@ def obter_dados(cnpj):
 
     conexao.close()
 
+    if empresa.get('status', '' == 'ERROR'):
+        return empresa.get('message', "Erro desconhecido")
+    
+    else:
+        return empresa
 
 cnpj_ex = "33157312000162"
 
