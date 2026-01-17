@@ -4,7 +4,7 @@ import json
 def obter_dados(cnpj):
     conexao = http.client.HTTPSConnection('www.receitaws.com.br')
 
-    conexao.request("GET", f"/v1/cnpj/cnpj")
+    conexao.request("GET", f"/v1/cnpj/{cnpj}")
 
     resposta = conexao.getresponse()
 
