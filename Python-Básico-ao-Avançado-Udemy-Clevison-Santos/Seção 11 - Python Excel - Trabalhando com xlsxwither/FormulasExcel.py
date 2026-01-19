@@ -33,6 +33,8 @@ sheetDados.write("C4", "=A4*B4")
 sheetDados.write("C5", "=A5/B5")
 sheetDados.write("C8", '=CONCATENATE(A8," ",B8)')
 
+sheetDados.set_column('A:C', 15)
+
 workbook.close()
 
 os.startfile(nomeCaminho)
