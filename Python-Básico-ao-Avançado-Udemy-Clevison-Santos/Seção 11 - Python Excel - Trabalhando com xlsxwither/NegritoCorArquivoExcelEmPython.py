@@ -18,8 +18,8 @@ corFonteFundo = workbook.add_format({
     'bg_color':'gray'
 })
 
-sheetDados.write("A1", "Nome", corFundo)
-sheetDados.write("B1", "Idade", corFundo)
+sheetDados.write("A1", "Nome", corFonteFundo)
+sheetDados.write("B1", "Idade", corFonteFundo)
 sheetDados.write("A2", "Amanda", corFonte)
 sheetDados.write("B2", 21, corFonte)
 sheetDados.write("A3", "Allan", corFonte)
@@ -28,3 +28,4 @@ sheetDados.write("B3", 28, corFonte)
 workbook.close()
 
 os.startfile(nomeCaminho) 
+
