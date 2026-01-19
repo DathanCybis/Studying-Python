@@ -11,6 +11,13 @@ corFundo = workbook.add_format({"fg_color":'yellow'})
 corFonte = workbook.add_format()
 corFonte.set_font_color('blue')
 
+corFonteFundo = workbook.add_format({
+    'align':'center',
+    'font_color':'white',
+    'bold':True,
+    'bg_color':'gray'
+})
+
 sheetDados.write("A1", "Nome", corFundo)
 sheetDados.write("B1", "Idade", corFundo)
 sheetDados.write("A2", "Amanda", corFonte)
