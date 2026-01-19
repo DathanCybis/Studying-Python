@@ -20,4 +20,4 @@ sheetDados.write("B3", 28, corFonte)
 
 workbook.close()
 
-os.startfile(nomeCaminho)
+os.startfile(nomeCaminho) 
