@@ -4,7 +4,7 @@ import os
 nomeCaminho = 'C:\\...\\...\\MergeCells.xlsx'
 
 workbook = xls.Workbook(nomeCaminho)
-sheetDados = workbook.add_worksheet("Dados")
+sheetDados = workbook.add_worksheet("MergeCells")
 
 add_merge = workbook.add_format({
     'bold': True,
