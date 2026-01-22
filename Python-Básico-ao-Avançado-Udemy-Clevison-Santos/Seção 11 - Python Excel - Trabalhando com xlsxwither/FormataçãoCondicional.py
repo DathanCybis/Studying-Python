@@ -24,6 +24,22 @@ inserirDados = [
     [7, 49, 51, 99]
 ]
 
+sheetDados.write('A1', "Células com valores >= 50 estão em verde e < 50 estão em vermelho")
+
+for linha, range in enumerate(inserirDados):
+    sheetDados.write_row(linha + 2, 1, range)
+
+sheetDados.conditional_format('B4:E8', {'type': 'cell',
+                                        'criteria': '>=',
+                                        'value': 50,
+                                        'format': formatoMaior})
+
+
+sheetDados.conditional_format('B4:E8', {'type': 'cell',
+                                        'criteria': '<',
+                                        'value': 50,
+                                        'format': formatoMenor})
+
 workbook.close()
 
 os.startfile(nomeCaminho)
