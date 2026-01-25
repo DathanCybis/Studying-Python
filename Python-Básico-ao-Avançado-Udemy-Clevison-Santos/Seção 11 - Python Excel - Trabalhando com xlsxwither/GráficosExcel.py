@@ -21,8 +21,8 @@ sheetDados.write_column('B2', dadosTabela[1])
 graficoColunas = workbook.add_chart({'type': 'column'})
 
 graficoColunas.add_series({
-    'name': '=Resumo!$B$1'
-    'categories': '=Resumo!$A$2:$A$7'
+    'name': '=Resumo!$B$1',
+    'categories': '=Resumo!$A$2:$A$7',
     'values': '=Resumo!$B$2:$B$7'
 })
 
