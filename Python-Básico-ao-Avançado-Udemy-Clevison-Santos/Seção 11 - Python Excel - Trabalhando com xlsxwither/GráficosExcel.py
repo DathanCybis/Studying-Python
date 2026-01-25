@@ -18,6 +18,8 @@ sheetDados.write_row('A1', titulos, negrito)
 sheetDados.write_column('A2', dadosTabela[0])
 sheetDados.write_column('B2', dadosTabela[1])
 
+graficoColunas = workbook.add_chart({'type': 'column'})
+
 
 
 workbook.close()
