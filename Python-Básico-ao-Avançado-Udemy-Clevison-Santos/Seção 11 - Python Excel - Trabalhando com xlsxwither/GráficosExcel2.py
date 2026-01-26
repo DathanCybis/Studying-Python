@@ -45,7 +45,7 @@ graficoEmpilhado.add_series({
 })
 
 graficoEmpilhado.set_title({'name': 'Gráfico Empilhado'})
-graficoEmpilhado.set_x_axis({'name': 'Funcionarios'})
+graficoEmpilhado.set_x_axis({'name': 'Funcionários'})
 graficoEmpilhado.set_y_axis({'name': 'Vendas'})
 
 graficoEmpilhado.set_style(12)
