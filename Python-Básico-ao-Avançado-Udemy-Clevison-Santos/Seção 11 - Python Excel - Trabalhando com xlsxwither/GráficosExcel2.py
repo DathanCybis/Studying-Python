@@ -26,6 +26,14 @@ graficoColunas.add_series({
     'values': '=Resumo!$B$2:$B$7'
 })
 
+graficoColunas.set_title({'name': 'Gráfico total de vendas'})
+graficoColunas.set_x_axis({'name': 'Vendedores'})
+graficoColunas.set_y_axis({'name': 'Vendas'})
+
+graficoColunas.set_style(11)
+
+sheetDados.insert_chart('D2', graficoColunas, {'x_offset': 25, 'y_offset': 10})
+
 workbook.close()
 
 os.startfile(nomeCaminho) 
