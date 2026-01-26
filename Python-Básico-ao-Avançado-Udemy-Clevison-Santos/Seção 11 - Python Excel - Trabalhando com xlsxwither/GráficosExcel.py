@@ -28,4 +28,4 @@ graficoColunas.add_series({
 
 workbook.close()
 
-os.startfile(nomeCaminho)
+os.startfile(nomeCaminho) 
