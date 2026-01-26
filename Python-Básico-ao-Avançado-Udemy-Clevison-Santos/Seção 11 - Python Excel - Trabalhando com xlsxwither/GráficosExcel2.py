@@ -44,8 +44,8 @@ graficoEmpilhado.add_series({
     'values': '=Resumo!$B$2:$B$7'
 })
 
-graficoEmpilhado.set_title({'name': 'Gráfico total de vendas'})
-graficoEmpilhado.set_x_axis({'name': 'Vendedores'})
+graficoEmpilhado.set_title({'name': 'Gráfico Empilhado'})
+graficoEmpilhado.set_x_axis({'name': 'Funcionarios'})
 graficoEmpilhado.set_y_axis({'name': 'Vendas'})
 
 graficoEmpilhado.set_style(12)
