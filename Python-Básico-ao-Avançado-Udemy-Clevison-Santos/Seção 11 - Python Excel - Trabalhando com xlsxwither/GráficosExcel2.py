@@ -34,6 +34,24 @@ graficoColunas.set_style(11)
 
 sheetDados.insert_chart('D2', graficoColunas, {'x_offset': 25, 'y_offset': 10})
 
+##############################################################
+
+graficoEmpilhado = workbook.add_chart({'type': 'area', 'subtype': 'stacked'})
+
+graficoEmpilhado.add_series({
+    'name': '=Resumo!$B$1',
+    'categories': '=Resumo!$A$2:$A$7',
+    'values': '=Resumo!$B$2:$B$7'
+})
+
+graficoEmpilhado.set_title({'name': 'Gráfico total de vendas'})
+graficoEmpilhado.set_x_axis({'name': 'Vendedores'})
+graficoEmpilhado.set_y_axis({'name': 'Vendas'})
+
+graficoEmpilhado.set_style(12)
+
+sheetDados.insert_chart('L2', graficoEmpilhado, {'x_offset': 25, 'y_offset': 10})
+
 workbook.close()
 
 os.startfile(nomeCaminho) 
