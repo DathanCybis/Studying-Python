@@ -1,14 +1,14 @@
-import xlsxwriter as xls
+from openpyxl import load_workbook
 import os
 
 nomeCaminho = 'C:\\...\\DeletarLinhaColunaExcel.xlsx'
+planilha_aberta = load_workbook(filename=nomeCaminho)
 
-workbook = xls.Workbook(nomeCaminho)
-sheetDados = workbook.add_worksheet("Dados")
+sheet_selecionada = planilha_aberta['Professor']
+
+sheet_selecionada.delete_rows(3)
 
 
+planilha_aberta.save(filename=nomeCaminho)
 
-
-workbook.close()
-
-os.startfile(nomeCaminho) 
+os.startfile(nomeCaminho)
