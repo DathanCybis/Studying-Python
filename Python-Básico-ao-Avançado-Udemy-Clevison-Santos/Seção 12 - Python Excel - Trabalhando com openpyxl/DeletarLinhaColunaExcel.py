@@ -7,6 +7,7 @@ planilha_aberta = load_workbook(filename=nomeCaminho)
 sheet_selecionada = planilha_aberta['Professor']
 
 sheet_selecionada.delete_rows(3)
+sheet_selecionada.delete_rows(3)
 
 
 planilha_aberta.save(filename=nomeCaminho)
