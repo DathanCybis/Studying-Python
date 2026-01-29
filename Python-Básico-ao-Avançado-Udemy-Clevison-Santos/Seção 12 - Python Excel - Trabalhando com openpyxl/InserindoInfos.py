@@ -15,8 +15,8 @@ dadosTabela = [
     ['Amanda', 25]
 ]
 
-
-
+for linha in dadosTabela:
+    sheet_selecionada.append(linha)
 
 
 planilha_aberta.save(filename=nomeCaminho)
