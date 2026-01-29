@@ -4,7 +4,7 @@ from openpyxl.styles import Color, PatternFill, Font, Border, Side
 from openpyxl.styles import colors
 from openpyxl.cell import Cell
 
-nomeCaminho = 'C:\\...\\InserirDadosPintarCelulas.xlsx'
+nomeCaminho = 'C:\\...\\InserirDadosPintarTodasCelulas.xlsx'
 planilha_aberta = load_workbook(filename=nomeCaminho)
 
 sheet_selecionada = planilha_aberta['Professor']
