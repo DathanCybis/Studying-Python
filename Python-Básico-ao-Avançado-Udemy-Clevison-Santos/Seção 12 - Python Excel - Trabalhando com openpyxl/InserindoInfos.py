@@ -26,8 +26,8 @@ corTitulo = PatternFill(start_color='00FFFF00',
                         end_color='00FFFF00',
                         fill_type='solid')
 
-corCelula = PatternFill(start_color='00FFFF00',
-                        end_color='00FFFF00',
+corCelula = PatternFill(start_color='00CCFFCC',
+                        end_color='00CCFFCC',
                         fill_type='solid')
 
 
@@ -36,9 +36,10 @@ sheet_selecionada["B1"].fill = corTitulo
 
 for linha in range(2, len(sheet_selecionada['A'] + 1)):
     celulaColunaA = "A" + str(linha)
-    celulaColunaA = "B" + str(linha)
+    celulaColunaB = "B" + str(linha)
 
     sheet_selecionada[celulaColunaA].fill = corCelula
+    sheet_selecionada[celulaColunaB].fill = corCelula
 
 
 planilha_aberta.save(filename=nomeCaminho)
