@@ -1,6 +1,9 @@
 from openpyxl import load_workbook
 import os
 from openpyxl.styles import Color, PatternFill, Font, Border, Side
+from openpyxl.styles import colors
+from openpyxl.cell import Cell
+
 nomeCaminho = 'C:\\...\\InserirDadosPintarCelulas.xlsx'
 planilha_aberta = load_workbook(filename=nomeCaminho)
 
@@ -19,7 +22,9 @@ for linha in dadosTabela:
     sheet_selecionada.append(linha)
 
 
-corTitulo = PatterFill(start_color='00FFFF00')
+corTitulo = PatternFill(start_color='00FFFF00',
+                        end_color='00FFFF00',
+                        fill_type='solid')
 
 
 planilha_aberta.save(filename=nomeCaminho)
