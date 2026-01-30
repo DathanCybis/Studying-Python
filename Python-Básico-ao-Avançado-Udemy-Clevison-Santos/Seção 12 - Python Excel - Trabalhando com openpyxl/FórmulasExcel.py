@@ -8,6 +8,10 @@ sheet_selecionada = planilha_aberta['Professor']
 
 sheet_selecionada["A6"] = "SUM(A2:A5)"
 sheet_selecionada["B6"] = "SUM(B2:B5)"
+sheet_selecionada["D2"] = "=A2+B2"
+sheet_selecionada["D3"] = "=A3-B3"
+sheet_selecionada["D4"] = "=A3*B3"
+sheet_selecionada["D5"] = "=A3/B3"
 
 planilha_aberta.save(filename=nomeCaminho)
 
