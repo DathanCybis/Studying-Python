@@ -4,7 +4,7 @@ import os
 nomeCaminho = 'C:\\...\\FórmulasExcel.xlsx'
 planilha_aberta = load_workbook(filename=nomeCaminho)
 
-sheet_selecionada = planilha_aberta['Fór']
+sheet_selecionada = planilha_aberta['Fórmul']
 
 sheet_selecionada["A6"] = "SUM(A2:A5)"
 sheet_selecionada["B6"] = "SUM(B2:B5)"
