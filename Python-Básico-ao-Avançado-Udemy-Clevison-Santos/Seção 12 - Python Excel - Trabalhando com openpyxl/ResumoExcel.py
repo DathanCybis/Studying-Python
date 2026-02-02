@@ -4,7 +4,7 @@ import os
 nomeCaminho = 'C:\\...\\Resumo.xlsx'
 planilha_aberta = load_workbook(filename=nomeCaminho)
 
-sheet_selecionada = planilha_aberta['Vendas']
+sheet_selecionada = planilha_aberta['VendasVendedores']
 
 somarAmanda = 0
 somarElaine = 0
