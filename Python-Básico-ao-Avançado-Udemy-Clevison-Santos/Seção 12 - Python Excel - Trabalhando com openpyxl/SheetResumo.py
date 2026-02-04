@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 from openpyxl import workbook
 import os
 
-nomeCaminho = 'C:\\...\\DadosExcel.xlsx'
+nomeCaminho = 'C:\\...\\DadosExcel2.xlsx'
 planilha_aberta = load_workbook(filename=nomeCaminho)
 
 sheet_selecionada = planilha_aberta['Dados']
