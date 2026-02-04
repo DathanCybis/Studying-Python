@@ -42,7 +42,7 @@ selecionaResumo = ['B4'] = '=SUMIF("Dados Funcionarios"!A:C, A4, "Dados Funciona
 selecionaResumo = ['A5'] = 'Nicolas Pereira' 
 selecionaResumo = ['B5'] = '=SUMIF("Dados Funcionarios"!A:C, A5, "Dados Funcionarios"!C:C)'
 
-caminhoNovaPlanilha = nomeCaminho = 'C:\\...\\DadosExcelAtt.xlsx'
+caminhoNovaPlanilha = nomeCaminho = 'C:\\...\\DadosExcelAtt2.xlsx'
 
 novoArquivo.save(filename=caminhoNovaPlanilha)
 
