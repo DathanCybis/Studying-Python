@@ -31,16 +31,16 @@ selecionaResumo['A1'] = "Vendedor"
 selecionaResumo['B1'] = "Total Vendas"
 
 selecionaResumo = ['A2'] = 'Amanda Martins'   
-selecionaResumo = ['B2'] = ''
+selecionaResumo = ['B2'] = '=SUMIF("Dados Funcionarios"!A:C, A2, "Dados Funcionarios"!C:C)'
 
 selecionaResumo = ['A3'] = 'Eliane Moreira'
-selecionaResumo = ['B3'] = ''
+selecionaResumo = ['B3'] = '=SUMIF("Dados Funcionarios"!A:C, A2, "Dados Funcionarios"!C:C)'
 
 selecionaResumo = ['A4'] = 'Leonardo Almeida' 
-selecionaResumo = ['B4'] = ''
+selecionaResumo = ['B4'] = '=SUMIF("Dados Funcionarios"!A:C, A2, "Dados Funcionarios"!C:C)'
 
 selecionaResumo = ['A5'] = 'Nicolas Pereira' 
-selecionaResumo = ['B5'] = ''
+selecionaResumo = ['B5'] = '=SUMIF("Dados Funcionarios"!A:C, A2, "Dados Funcionarios"!C:C)'
 
 caminhoNovaPlanilha = nomeCaminho = 'C:\\...\\DadosExcelAtt.xlsx'
 
