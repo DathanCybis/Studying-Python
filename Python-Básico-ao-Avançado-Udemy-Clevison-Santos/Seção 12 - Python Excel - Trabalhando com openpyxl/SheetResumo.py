@@ -15,6 +15,12 @@ for linha in range(1, len(sheet_selecionada['A']) + 1):
     for coluna in range(1, 10):
         novaPlanilha.cell(row=linha, column=coluna).value = sheet_selecionada.cell(row=linha, column=coluna).value
 
+
+novaPlanilha.delete_rows(2)
+
+novaPlanilha.delete_cols(2)
+novaPlanilha.delete_cols(2)
+
 novaPlanilha.title = 'Dados Funcionários'
 
 novoArquivo.create_sheet('Resumo')
