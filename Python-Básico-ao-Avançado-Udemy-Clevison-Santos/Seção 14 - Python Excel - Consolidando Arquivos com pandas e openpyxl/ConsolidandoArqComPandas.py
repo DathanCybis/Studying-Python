@@ -7,4 +7,5 @@ listaArquivos = os.listdir(caminhoArquivos)
 
 print(listaArquivos)
 
-listaCaminhoEArquivo = [caminho]
+listaCaminhoEArquivo = [caminhoArquivos + '\\' + arquivo for arquivo in listaArquivos if arquivo[-4:] == "xlsx"]
+
