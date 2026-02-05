@@ -12,3 +12,4 @@ listaCaminhoEArquivo = [caminhoArquivos + '\\' + arquivo for arquivo in listaArq
 print("-------------###--------------###-----------")
 print("-------------###--------------###-----------")
 print("-------------###--------------###-----------")
+print(listaCaminhoEArquivo)
