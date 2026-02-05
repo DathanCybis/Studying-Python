@@ -5,3 +5,6 @@ caminhoArquivos = "C:\\...\\ArquivosExcel"
 
 listaArquivos = os.listdir(caminhoArquivos)
 
+print(listaArquivos)
+
+listaCaminhoEArquivo = [caminho]
