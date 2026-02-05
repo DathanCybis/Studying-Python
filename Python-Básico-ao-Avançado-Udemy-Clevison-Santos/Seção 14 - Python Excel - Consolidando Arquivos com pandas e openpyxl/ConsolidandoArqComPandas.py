@@ -9,3 +9,6 @@ print(listaArquivos)
 
 listaCaminhoEArquivo = [caminhoArquivos + '\\' + arquivo for arquivo in listaArquivos if arquivo[-4:] == "xlsx"]
 
+print("-------------###--------------###-----------")
+print("-------------###--------------###-----------")
+print("-------------###--------------###-----------")
