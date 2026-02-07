@@ -22,4 +22,12 @@ for linha in range(2, totalLinha):
 
         nomeAtual = sheet_selecionada['A%s' % linha].value
 
-        
+        sheet_selecionada2['A1'] = "Vendedor"
+        sheet_selecionada2['B1'] = "Produtos"
+        sheet_selecionada2['C1'] = "Vendas"
+
+        sheet_selecionada2['A2'] = sheet_selecionada['A%s' % linha].value
+        sheet_selecionada2['B2'] = sheet_selecionada['B%s' % linha].value
+        sheet_selecionada2['B2'] = sheet_selecionada['C%s' % linha].value
+
+
