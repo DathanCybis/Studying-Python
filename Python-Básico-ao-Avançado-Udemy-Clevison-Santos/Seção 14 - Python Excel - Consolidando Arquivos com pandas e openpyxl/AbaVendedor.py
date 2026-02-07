@@ -16,3 +16,10 @@ for linha in range(2, totalLinha):
     if nomeNovo == nomeAtual:
         pass
     else:
+        sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
+
+        sheet_selecionada2 = planilha_aberta[nomeAtual]
+
+        nomeAtual = sheet_selecionada['A%s' % linha].value
+
+        
