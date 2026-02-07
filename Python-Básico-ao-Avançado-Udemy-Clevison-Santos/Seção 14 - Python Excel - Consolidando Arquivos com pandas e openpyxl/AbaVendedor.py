@@ -30,4 +30,6 @@ for linha in range(2, totalLinha):
         sheet_selecionada2['B2'] = sheet_selecionada['B%s' % linha].value
         sheet_selecionada2['B2'] = sheet_selecionada['C%s' % linha].value
 
+planilha_aberta.save(filename=nomeArquivo)
 
+os.startfile(nomeArquivo)
