@@ -7,3 +7,6 @@ planilha_aberta = load_workbook(filename=nomeArquivo)
 
 sheet_selecionada = planilha_aberta['Dados']
 
+nomeNovo = ""
+totalLinha = len(sheet_selecionada['A']) + 1
+
