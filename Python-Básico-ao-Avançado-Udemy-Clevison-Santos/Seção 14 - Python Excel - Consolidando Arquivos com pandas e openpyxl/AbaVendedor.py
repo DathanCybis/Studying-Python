@@ -19,6 +19,10 @@ for linha in range(2, totalLinha):
         celulaColunaB = "B" + str(linhaSheet)
         celulaColunaC = "C" + str(linhaSheet)
 
+        sheet_selecionada2[celulaColunaA] = sheet_selecionada['A%s' % linha].value
+        sheet_selecionada2[celulaColunaB] = sheet_selecionada['B%s' % linha].value
+        sheet_selecionada2[celulaColunaC] = sheet_selecionada['C%s' % linha].value
+
     else:
         sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
 
