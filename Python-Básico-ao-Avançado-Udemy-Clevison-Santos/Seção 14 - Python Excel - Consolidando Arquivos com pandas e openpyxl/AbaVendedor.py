@@ -14,7 +14,8 @@ for linha in range(2, totalLinha):
     nomeAtual = sheet_selecionada['A%s' % linha].value
 
     if nomeNovo == nomeAtual:
-        pass
+        linhaSheet = len(sheet_selecionada2['A'] + 1)
+
     else:
         sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
 
