@@ -15,6 +15,9 @@ for linha in range(2, totalLinha):
 
     if nomeNovo == nomeAtual:
         linhaSheet = len(sheet_selecionada2['A'] + 1)
+        celulaColunaA = "A" + str(linhaSheet)
+        celulaColunaB = "B" + str(linhaSheet)
+        celulaColunaC = "C" + str(linhaSheet)
 
     else:
         sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
