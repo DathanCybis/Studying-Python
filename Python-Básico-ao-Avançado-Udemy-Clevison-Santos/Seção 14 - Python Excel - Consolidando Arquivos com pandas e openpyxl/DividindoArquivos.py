@@ -1,4 +1,5 @@
 from openpyxl import load_workbook
+from openpyxl import Workbook
 import os
 
 nomeArquivo = "C:\\...\\...\\DividindoArquivos.xlsx"
@@ -6,6 +7,8 @@ nomeArquivo = "C:\\...\\...\\DividindoArquivos.xlsx"
 planilha_aberta = load_workbook(filename=nomeArquivo)
 
 sheet_selecionada = planilha_aberta['Dados']
+
+criandoNovoExcel = Workbook()
 
 nomeNovo = ""
 totalLinha = len(sheet_selecionada['A']) + 1
@@ -30,6 +33,10 @@ for linha in range(2, totalLinha):
 
         nomeAtual = sheet_selecionada['A%s' % linha].value
 
+        nova_planilha = criandoNovoExcel.active
+
+        nova_planilha.title = "Vendas"
+
         caminhoNovaPlanilha = "C:\\...\\...\\DividindoArquivos.xlsx"
 
         sheet_selecionada2['A1'] = "Vendedor"
@@ -40,7 +47,7 @@ for linha in range(2, totalLinha):
         sheet_selecionada2['B2'] = sheet_selecionada['B%s' % linha].value
         sheet_selecionada2['C2'] = sheet_selecionada['C%s' % linha].value
 
-        criandoNovoExcel.save(filename=)
+        criandoNovoExcel.save(filename=caminhoNovaPlanilha)
 
 planilha_aberta.save(filename=nomeArquivo)
 
