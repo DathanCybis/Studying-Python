@@ -17,19 +17,19 @@ for linha in range(2, totalLinha):
     nomeAtual = sheet_selecionada['A%s' % linha].value
 
     if nomeNovo == nomeAtual:
-        linhaSheet = len(sheet_selecionada2['A'] + 1)
+        linhaSheet = len(selecionaSheet['A'] + 1)
         celulaColunaA = "A" + str(linhaSheet)
         celulaColunaB = "B" + str(linhaSheet)
         celulaColunaC = "C" + str(linhaSheet)
 
-        sheet_selecionada2[celulaColunaA] = sheet_selecionada['A%s' % linha].value
-        sheet_selecionada2[celulaColunaB] = sheet_selecionada['B%s' % linha].value
-        sheet_selecionada2[celulaColunaC] = sheet_selecionada['C%s' % linha].value
+        selecionaSheet[celulaColunaA] = sheet_selecionada['A%s' % linha].value
+        selecionaSheet[celulaColunaB] = sheet_selecionada['B%s' % linha].value
+        selecionaSheet[celulaColunaC] = sheet_selecionada['C%s' % linha].value
 
     else:
         sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
 
-        sheet_selecionada2 = planilha_aberta[nomeAtual]
+        selecionaSheet = planilha_aberta[nomeAtual]
 
         nomeAtual = sheet_selecionada['A%s' % linha].value
 
@@ -39,13 +39,17 @@ for linha in range(2, totalLinha):
 
         caminhoNovaPlanilha = "C:\\...\\...\\DividindoArquivos.xlsx"
 
-        sheet_selecionada2['A1'] = "Vendedor"
-        sheet_selecionada2['B1'] = "Produtos"
-        sheet_selecionada2['C1'] = "Vendas"
+        selecionaSheet = criandoNovoExcel['Vendas']
 
-        sheet_selecionada2['A2'] = sheet_selecionada['A%s' % linha].value
-        sheet_selecionada2['B2'] = sheet_selecionada['B%s' % linha].value
-        sheet_selecionada2['C2'] = sheet_selecionada['C%s' % linha].value
+        selecionaSheet['A1'] = "Vendedor"
+        selecionaSheet['B1'] = "Produtos"
+        selecionaSheet['C1'] = "Vendas"
+
+        selecionaSheet['A2'] = sheet_selecionada['A%s' % linha].value
+        selecionaSheet['B2'] = sheet_selecionada['B%s' % linha].value
+        selecionaSheet['C2'] = sheet_selecionada['C%s' % linha].value
+
+        selecionaSheet.delete_rows(3, 100)
 
         criandoNovoExcel.save(filename=caminhoNovaPlanilha)
 
