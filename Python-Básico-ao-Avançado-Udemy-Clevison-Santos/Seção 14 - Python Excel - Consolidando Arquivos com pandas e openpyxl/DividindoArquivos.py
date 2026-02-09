@@ -26,6 +26,8 @@ for linha in range(2, totalLinha):
         selecionaSheet[celulaColunaB] = sheet_selecionada['B%s' % linha].value
         selecionaSheet[celulaColunaC] = sheet_selecionada['C%s' % linha].value
 
+        criandoNovoExcel.save(filename=caminhoNovaPlanilha)
+
     else:
         sheet_resumo = planilha_aberta.create_sheet(title=nomeAtual)
 
