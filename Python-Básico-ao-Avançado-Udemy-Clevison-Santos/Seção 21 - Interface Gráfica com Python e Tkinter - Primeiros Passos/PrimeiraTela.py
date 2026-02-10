@@ -4,4 +4,4 @@ janela = Tk()
 
 janela.title("Interface Gráfica")
 
-janela.mainloop()
+janela.mainloop() 
