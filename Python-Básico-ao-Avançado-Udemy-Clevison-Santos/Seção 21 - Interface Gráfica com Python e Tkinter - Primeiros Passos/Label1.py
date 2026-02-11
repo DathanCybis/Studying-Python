@@ -24,5 +24,7 @@ r3.pack()
 r4.pack()
 r5.pack()
 
+r1 = Label(janela, text = "FLAT BG FG FONT", relief=FLAT, bg="green", fg="white", font="arial")
+r1.pack()
 
 janela.mainloop() 
