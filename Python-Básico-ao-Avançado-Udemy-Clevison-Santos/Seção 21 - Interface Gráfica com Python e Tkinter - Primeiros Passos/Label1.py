@@ -8,4 +8,10 @@ intrucao = Label(text="Bem vindos ao Curso de Tkinter")
 
 intrucao.pack()
 
+intrucao2 = Label(text="Interface Gráfica")
+
+intrucao2.pack()
+
+
+
 janela.mainloop() 
