@@ -27,4 +27,7 @@ r5.pack()
 r1 = Label(janela, text = "FLAT BG FG FONT", relief=FLAT, bg="green", fg="white", font="arial")
 r1.pack()
 
+r4 = Label(janela, text = "GROOVE borderwidth", relief=GROOVE, bg="green", fg="white", borderwidth=10)
+r4.pack()
+
 janela.mainloop() 
