@@ -15,7 +15,7 @@ for linha in range(5):
             borderwidth=1
 
         )
-        tabela.grid(row=linha, column=coluna)
+        tabela.grid(row=linha, column=coluna, padx=5, pady=5)
         label = Label(master=tabela,
                       text=f"Linha {linha}\n Coluna {coluna}")
         label.pack()
