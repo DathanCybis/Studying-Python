@@ -15,6 +15,8 @@ for linha in range(5):
             borderwidth=1
 
         )
-        tabela.grid
+        tabela.grid(row=linha, column=coluna)
+        label = Label(master=tabela,
+                      text=f"Linha {linha}\n Coluna {coluna}")
 
 janela.mainloop() 
