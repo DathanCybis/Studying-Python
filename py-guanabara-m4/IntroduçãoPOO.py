@@ -23,3 +23,6 @@ g2.nome = "Mauro"
 g2.idade = 53
 g2.aniversario()
 print(g2.mensagem())
+
+g3 = Gafanhoto()
+print(g3.mensagem())
