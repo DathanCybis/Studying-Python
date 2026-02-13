@@ -12,3 +12,9 @@ class Gafanhoto:
         return f"{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade"
     
 
+g1 = Gafanhoto()
+g1.nome = "Maria"
+g1.idade = 67
+g1.aniversario()
+print(g1.mensagem())
+
