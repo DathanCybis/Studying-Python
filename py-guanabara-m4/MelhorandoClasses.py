@@ -26,3 +26,5 @@ print(g2.mensagem())
 
 g3 = Gafanhoto()
 print(g3.mensagem())
+
+print(g1.__doc__)
