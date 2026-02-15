@@ -1,4 +1,8 @@
 class Gafanhoto:
+    """
+    Docstring for Gafanhoto:
+    Essa classe cria um Gafanhoto
+    """
     def __init__(self, nome = "", idade= 0):
         self.nome = nome
         self.idade = idade
