@@ -16,6 +16,9 @@ class Gafanhoto:
         return f"{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade"
     
 
+    def __str__(self):
+        return f"{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade"
+
 g1 = Gafanhoto("Maria", 67)
 g1.aniversario()
 print(g1.mensagem())
