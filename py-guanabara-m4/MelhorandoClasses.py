@@ -1,7 +1,7 @@
 class Gafanhoto:
-    def __init__(self):
-        self.nome = ""
-        self.idade = 0
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
 
 
     def aniversario(self):
@@ -12,9 +12,7 @@ class Gafanhoto:
         return f"{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade"
     
 
-g1 = Gafanhoto()
-g1.nome = "Maria"
-g1.idade = 67
+g1 = Gafanhoto("Maria", 67)
 g1.aniversario()
 print(g1.mensagem())
 
