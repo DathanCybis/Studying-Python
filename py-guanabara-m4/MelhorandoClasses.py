@@ -23,7 +23,12 @@ class Gafanhoto:
 g1 = Gafanhoto("Maria", 67)
 g1.aniversario()
 print(g1)
-print(g1.__dict__)
-print(g1.__getstate__())
+print(g1.__dict__) # Attribute
+print(g1.__getstate__()) # Method
 #print(g1.__doc__)
+print(g1.__class__)
+
+g2 = Gafanhoto("Mauro", 54)
+print(g2)
+print(g2.__getstate__())
 
