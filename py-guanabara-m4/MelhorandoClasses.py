@@ -30,5 +30,5 @@ print(g1.__class__)
 
 g2 = Gafanhoto("Mauro", 54)
 print(g2)
-print(g2.__getstate__())
+print(g2.__getstate__()) 
 
