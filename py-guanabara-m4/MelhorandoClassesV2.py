@@ -9,5 +9,15 @@ class ContaBancaria:
         return f"A conta {self.id} de {self.titular} tem R${self.saldo:,.2f} de saldo."
     
 
+    def depositar(self, valor):
+        self.saldo += valor
+        print(f"Depósito de R${valor:,.2f} autorizado na conta {self.id}")
+
+
+    def sacar(self, valor):
+        self.saldo -= valor
+        print(f"Saque de R${valor:,.2f} autorizado na conta {self.id}")
+
+
 c1 = ContaBancaria(112, "Gustavo", 3000)
 print(c1)
