@@ -15,9 +15,16 @@ class ContaBancaria:
 
 
     def sacar(self, valor):
-        self.saldo -= valor
-        print(f"Saque de R${valor:,.2f} autorizado na conta {self.id}")
+        if self.saldo - valor < 0:
+            print(f"Saque de R${valor:,.2f} não autorizado!")
+        else:
+            self.saldo -= valor
+            print(f"Saque de R${valor:,.2f} autorizado na conta {self.id}")
 
 
 c1 = ContaBancaria(112, "Gustavo", 3000)
+c1.depositar(500)
+c1.sacar(1500)
+print(c1)
+c1.sacar(2001)
 print(c1)
