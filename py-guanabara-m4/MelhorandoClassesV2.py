@@ -6,6 +6,8 @@ class ContaBancaria:
 
     
     def __str__(self):
-        return f"A conta{self.id} de {self.titular} tem R${self.saldo:,.2f} de saldo."
+        return f"A conta {self.id} de {self.titular} tem R${self.saldo:,.2f} de saldo."
     
 
+c1 = ContaBancaria(112, "Gustavo", 3000)
+print(c1)
