@@ -12,5 +12,7 @@ tabela = Table(title="Tabela de preços")
 
 tabela.add_column("Nome")
 tabela.add_column("Preço")
+tabela.add_row("Lápis", "R$1.50")
+tabela.add_row("Borracha", "R$5.60")
 
 print(tabela)
