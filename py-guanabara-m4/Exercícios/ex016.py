@@ -11,10 +11,13 @@ class Funcionario:
         return f":wave: Olá, sou [bold blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor}, da empresa Curso em Vídeo"
 
 
-
 c1 = Funcionario("Maria", "Administração", "Diretora")
 print(c1.apresentacao())
 
 
 c2 = Funcionario("Pedro", "TI", "Programador")
 print(c2.apresentacao())
+
+
+c3 = Funcionario("João", "Administração", "Contador")
+print(c3.apresentacao())
