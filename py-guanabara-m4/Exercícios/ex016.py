@@ -8,7 +8,7 @@ class Funcionario:
 
 
     def apresentacao(self):
-        return f"Olá, sou [bold blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor}, da empresa Curso em Vídeo"
+        return f":wave: Olá, sou [bold blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor}, da empresa Curso em Vídeo"
 
 
 
