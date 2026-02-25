@@ -18,7 +18,8 @@ inspect(c1)
 
 c2 = Funcionario("Pedro", "TI", "Programador")
 print(c2.apresentacao())
-
+inspect(c2)
 
 c3 = Funcionario("João", "Administração", "Contador")
 print(c3.apresentacao())
+inspect(c3)
