@@ -1,4 +1,5 @@
 from rich import print
+from rich import inspect
 
 class Funcionario:
     def __init__(self, nome, setor, cargo):
