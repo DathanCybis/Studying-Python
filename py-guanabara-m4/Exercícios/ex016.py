@@ -2,6 +2,8 @@ from rich import print
 from rich import inspect
 
 class Funcionario:
+    empresa = "Curso em Vídeo"
+
     def __init__(self, nome, setor, cargo):
         self.nome = nome
         self.setor = setor
@@ -9,7 +11,7 @@ class Funcionario:
 
 
     def apresentacao(self):
-        return f":wave: Olá, sou [bold blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor}, da empresa Curso em Vídeo"
+        return f":wave: Olá, sou [bold blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor}, da empresa {Funcionario.empresa}"
 
 
 c1 = Funcionario("Maria", "Administração", "Diretora")
