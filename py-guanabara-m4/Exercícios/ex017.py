@@ -4,6 +4,10 @@ class Produto:
         self.preco = preco
 
 
+    def etiqueta(self):
+        print()
+
+
 
 p1 = Produto("iPhon 17 Pro Max", 25_000.85)
 p2 = Produto("Notebook Gamer", 8_000)
