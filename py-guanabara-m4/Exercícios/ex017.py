@@ -8,7 +8,12 @@ class Produto:
 
 
     def etiqueta(self):
-        etqNome = Panel(f"{self.nome} \n R${self.preco:,.2f}", title="Produto", width=55)
+        conteudo = f"{self.nome.center(51, ' ')}"
+        conteudo += f"{'-' * 51}"
+        precof = f"R${self.preco:,.2f}"
+        conteudo += f"{precof.center(51, '.')}"
+
+        etqNome = Panel(f"{conteudo}", title="Produto", width=55)
         print(etqNome)
 
 
